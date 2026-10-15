@@ -1,0 +1,25 @@
+{
+  "id" : "unsigned-xml",
+  "extractor" : "refuse:unsigned",
+  "file" : {
+    "name" : "invoice.xml",
+    "size" : 156,
+    "digests" : {
+      "sha256" : "88f27391ef30d201ef02bd71dcf12b4d2c914da2196ca752043c4552e5cbc34c",
+      "sha512" : "34e8712a87c775580ee74e22d2402a49459412c39cb9d25abc72cc3e6b9ff41a112763c08e12449b3b003849505c02c491438b1c01c44c1f21e702a3f52e1c2a",
+      "sha3-512" : "664380aa5237c899c841e1f1e686e127a5d046402967e533bde14522b38624c14faed7b1f7825ad97c9705e636a9f78c1c92e69c7395f58f0aca8271afb81c90"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : []
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [],
+    "timestamps" : []
+  }
+}

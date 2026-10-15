@@ -1,0 +1,127 @@
+{
+  "id" : "asics-xades",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "onefile-ok.asics",
+    "size" : 5439,
+    "digests" : {
+      "sha256" : "68cc4bd3079b9220edd08ecac6a5402723a3db9655125e761f62b61b2dbe8b50",
+      "sha512" : "75c8ffb4bc6facaffeda678e680f25492121928da47479468299815ed4d60ac4250dcdec953955a84e04db8b8601c78d0951596ed5c96126ee88460294067162",
+      "sha3-512" : "4d1bcd12493fa5e4a739da9f2caf3ad919e6c704f8fc37bd1de0be8785984b5d9b157447b4a805281876d1bcf42b2723d2a35ace5f96557e88172d786d3dfa53"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "asic",
+    "mimetype" : "application/vnd.etsi.asic-s+zip",
+    "data_objects" : [
+      {
+        "name" : "test.text",
+        "size" : 13,
+        "digests" : {
+          "sha256" : "07f2bdef34ed16e3a1ba0dbb7e47b8fd981ce0ccb3e1bfe564d82c423cba7e47",
+          "sha512" : "feab0028f1142d420a1425d1dd5b518225b4523aa1cff63385ece3411318819f5ec83042ccb79d81f20e4a243866886ca3ae3026153acff8e126c0e89631502e",
+          "sha3-512" : "2beaad510de3f69fe59bf0515a67398e7c82bc37f04590a1c30a710596b5531ad7b7b6d4cdd9c5a5636e0cd1d4452c182fc1f0173b5906ce5d3fb6754283a01f"
+        }
+      }
+    ],
+    "meta_inf" : [
+      {
+        "name" : "META-INF/signatures.xml",
+        "size" : 9133,
+        "sha256" : "844e9ee3b97c9c4831b573bce51d9819a61a9d874f96bace36c8b0f21f9170e9"
+      }
+    ],
+    "xml_signatures" : [
+      {
+        "entry" : "META-INF/signatures.xml",
+        "signatures" : [
+          {
+            "id" : "id-82dd28609ae395ebbc8739380b57c19a",
+            "placement" : "embedded",
+            "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+            "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+            "signed_info_c14n_sha256" : "1e42e0435cffcf821f9255fbc3a91c1568d8103558447feae2bd94ced6cfb624",
+            "inherited_namespaces" : [
+              "xmlns:asic"
+            ],
+            "inherited_xml_attributes" : [],
+            "references" : [
+              {
+                "uri" : "test.text",
+                "type" : "",
+                "transforms" : [],
+                "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+                "digest" : "07f2bdef34ed16e3a1ba0dbb7e47b8fd981ce0ccb3e1bfe564d82c423cba7e47"
+              },
+              {
+                "uri" : "#xades-id-82dd28609ae395ebbc8739380b57c19a",
+                "type" : "http://uri.etsi.org/01903#SignedProperties",
+                "transforms" : [
+                  "http://www.w3.org/2001/10/xml-exc-c14n#"
+                ],
+                "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+                "digest" : "0e7dc8cc2aa2fc9205b69abcb79e34bd84f30fe98a87b0853cd01c795ef98d53"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cms_signatures" : []
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "container_type" : "ASiC-S",
+    "signatures" : [
+      {
+        "id" : "S-FB88AA8411A332D44B8851F1006A68FFC8F6BF93EADC71F5519249E759559317",
+        "signature_filename" : "META-INF/signatures.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=LU,OU=PKI-TEST,O=Nowina Solutions,CN=good-user",
+          "serial" : "10",
+          "sha256" : "500e21416a8a995bd56aa36b25ec601bb9d0fc94743f73d61fdf2d384fbe9e68",
+          "not_before" : "2017-04-14T06:26:09Z",
+          "not_after" : "2019-02-14T07:26:09Z"
+        },
+        "claimed_signing_time" : "2018-03-16T09:08:56Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "test.text",
+            "name" : "test.text",
+            "alg" : "SHA256",
+            "digest" : "07f2bdef34ed16e3a1ba0dbb7e47b8fd981ce0ccb3e1bfe564d82c423cba7e47",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#xades-id-82dd28609ae395ebbc8739380b57c19a",
+            "alg" : "SHA256",
+            "digest" : "0e7dc8cc2aa2fc9205b69abcb79e34bd84f30fe98a87b0853cd01c795ef98d53",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "ALL_DATA_OBJECTS_TIMESTAMP",
+            "production_time" : "2018-03-16T09:08:58Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

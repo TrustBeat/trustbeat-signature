@@ -1,0 +1,102 @@
+{
+  "id" : "xades-trusted-list",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "sk-tsl.xml",
+    "size" : 760835,
+    "digests" : {
+      "sha256" : "b8d03ea122be74b2d23092b52993a16f18507e665fe7a8c79e95ed4270a0b2c5",
+      "sha512" : "3e80ad23b6877b4f68621754d1b43944143313eb8a48825343f76e450df911593417d5783502af86531d9ceefc5b5eea18e24e161f70e1b048ec2ca1079933b8",
+      "sha3-512" : "6e767e718cad9d8eb4f319ff73adac7a0acdf3086198f798cc0c89bb6b5b909295bec44c9662eed562d85a2ff2a0eaf437046f3ce99a08d5d6a2aa3711c54bad"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature-166581973",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "790698f62bc4d4d233be36d275c41e5900f90604ac92ff1e01e69b67b6295451",
+        "inherited_namespaces" : [
+          "xmlns",
+          "xmlns:ns2",
+          "xmlns:ns3",
+          "xmlns:ns4",
+          "xmlns:ns5",
+          "xmlns:ns6",
+          "xmlns:tlx509"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature",
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "bbe6056967baac8c13ea3f81658a518c1931a8600f57ad63f944f69821b7d6a5"
+          },
+          {
+            "uri" : "#SignedProperties-264185249",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "e9b890685871b3b36968e069994e643e493cbedd672154e5fa977e9eb720d49b"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-0D404A8D95E87B8B03818BD54C304658B380C18844C34CC2F54A6AAF79B25093",
+        "signature_filename" : "sk-tsl.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130e4e5452534b2d3336303631373031,CN=TL and Signature Policy List 6,O=Národný bezpečnostný úrad,L=Bratislava,C=SK",
+          "serial" : "2136",
+          "sha256" : "4e7baa2941c9e24520b20d1e1b6ee73de6e17f7540c57e49271767ae935596a7",
+          "not_before" : "2019-02-15T13:25:23Z",
+          "not_after" : "2023-02-15T13:24:21Z"
+        },
+        "claimed_signing_time" : "2021-03-29T08:00:00.071Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "bbe6056967baac8c13ea3f81658a518c1931a8600f57ad63f944f69821b7d6a5",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties-264185249",
+            "alg" : "SHA256",
+            "digest" : "e9b890685871b3b36968e069994e643e493cbedd672154e5fa977e9eb720d49b",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

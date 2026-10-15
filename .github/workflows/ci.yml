@@ -1,0 +1,44 @@
+# Tests on every push and pull request to TrustBeat/trustbeat-signature.
+#
+# This workflow lives at the root of the public repo (mirrored from eu-security-app
+# signature-extractor/). It does not run in the monorepo; there the `signature-extractor`
+# job of ci.yml runs the same checks.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions: {}
+
+jobs:
+  test:
+    name: Vet, test, build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read  # checkout only
+    env:
+      GOTOOLCHAIN: local
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16  # v6.5.0
+        with:
+          go-version: '1.23.4'  # = the toolchain line of go.mod (checked below)
+          cache: false
+
+      - name: Vet and format
+        run: |
+          want="$(sed -n 's/^toolchain //p' go.mod)"
+          [ "$(go env GOVERSION)" = "$want" ] || { echo "::error::Go $(go env GOVERSION), go.mod pins $want"; exit 1; }
+          go vet ./...
+          test -z "$(gofmt -l .)" || { gofmt -l .; exit 1; }
+
+      - name: Test against the DSS oracle
+        run: go test -count=1 ./...
+
+      - name: Build release archives
+        run: ./build.sh "ci-${GITHUB_SHA::7}"

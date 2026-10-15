@@ -1,0 +1,171 @@
+{
+  "id" : "pades-two-qes-sk",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-P-SK-6.pdf",
+    "size" : 527103,
+    "digests" : {
+      "sha256" : "09a8742c68cfd10808780f54c25d65b0a527439bc5ab231e0bf3d85f05b2c346",
+      "sha512" : "bb40f79c4dfebf4c15a37ed48fd78917e46bf6e89fd1a019b87091b56ab33ab67a662776dd2d5e8f00b9977dad6493875556c669a15009d66e627dcf9879561b",
+      "sha3-512" : "8adae1457cfc310c13fca89f4a93939bd4f41f470fce7a5b3f312a3d3fa15a7844a8bf16fd6e664761423e5a551fde4c526249dc0cf9197962c783b9cd9b671b"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          265190,
+          285672,
+          47313
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "e1aba621198c76a4ec77ac4c2ffa368ef2695d7f224f9d5b5beeb96a0359d2b8",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 9983,
+          "sha256" : "8daf305f1bc773f3a80a4942ec80d866fcd4eeb789cf913dea8d8f0298d6b165",
+          "version" : 1,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.RFC3161",
+        "byte_range" : [
+          0,
+          391882,
+          412364,
+          46954
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "1b1ffe1a610eb29ef543ab6a9259d584574ed1720d5cf21374ba379426d86884",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 2641,
+          "sha256" : "48ad95e693ab66bdb7083714c1699ec01b97617da2e5a6a8bf4a29380dc81552",
+          "version" : 3,
+          "signers" : 1,
+          "encapsulated_content" : {
+            "sha256" : "56269c803c817a5929c84cfba38992022552d5e3eaacec7bd14584c5ba266bb6",
+            "sha512" : "ff779dd9307eac2a2dd0c95e279891252193b918bedcf4f7469eaf6c97481b76518c17e350a4cf4187299c3f65ac4b96a6502356db6753921cb5a48b24404790",
+            "sha3-512" : "67eb7e16250f733975950f7eb5c6001779604537fc8952d2cf30e385bb68b86456d8703a981b15137190898e542cf551138e5de353dd067d60f643e0f930818b"
+          }
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          459482,
+          479964,
+          47139
+        ],
+        "covers_whole_file" : true,
+        "signed_range_sha256" : "61932e7a8d27d0e3878277789d6bd518ea4958fed23742bbd9d9cfcfe9d8a0e6",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 9983,
+          "sha256" : "70d8e852c63813810319e1cf81c0f71abb303af25baaa2eff9ed993fcbf2df21",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-948127D961D1F3F7BC80EBCE80D9DD00AF25FA4736144B222DCAC372720B3B9B",
+        "signature_filename" : "Signature-P-SK-6.pdf",
+        "format" : "PAdES-BASELINE-LT",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130e494443534b205350393835323734,C=SK,CN=Disig DEV test 4 - PSEUDONYM",
+          "serial" : "16791818",
+          "sha256" : "15c36fe3f117921fadcf4edcbe9eecca20d81c74ed08c3d2dbad43087fb1eef4",
+          "not_before" : "2012-09-03T13:22:02Z",
+          "not_after" : "2013-09-03T13:22:06Z"
+        },
+        "claimed_signing_time" : "2013-04-03T08:07:21Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "e1aba621198c76a4ec77ac4c2ffa368ef2695d7f224f9d5b5beeb96a0359d2b8",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          265190,
+          285672,
+          47313
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2013-04-03T08:07:27.627Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      },
+      {
+        "id" : "S-811328C05C467913604755ED2FDB6264D6251A14C8AE3E9633AEE2F203C8A5B0",
+        "signature_filename" : "Signature-P-SK-6.pdf",
+        "format" : "PAdES-BASELINE-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130e494443534b20534a303932313131,C=SK,CN=Disig DEV test 6 - PSEUDONYM",
+          "serial" : "16794488",
+          "sha256" : "4c06259be48afcbe2db88844ac421803151850f60d0b3324b91b0df62f3ff89d",
+          "not_before" : "2013-05-13T12:29:54Z",
+          "not_after" : "2014-05-13T12:29:58Z"
+        },
+        "claimed_signing_time" : "2013-09-06T14:23:06Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "61932e7a8d27d0e3878277789d6bd518ea4958fed23742bbd9d9cfcfe9d8a0e6",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          459482,
+          479964,
+          47139
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2013-09-06T14:23:24.577Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

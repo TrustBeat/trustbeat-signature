@@ -1,0 +1,85 @@
+{
+  "id" : "cades-enveloping-lta",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-C-B-LTA-10.p7m",
+    "size" : 112770,
+    "digests" : {
+      "sha256" : "a859f24802ca228b8ef7d8c12e37fce8a98c4a94b4948aa3ad42980bdcfb2258",
+      "sha512" : "8c936e382011ba97bbc5aed3fba0011da8b00cc7491d6c05e9515dff44e3179a62358fd5c5e847be755e277e900f2b752598b267862c8330788d883c6eb15baa",
+      "sha3-512" : "a9ec3bb95450b8db1c88131907a7adb56f7e05bafc178255a503f93a2d8eeaaa2288e3ac3143154a3dff530e743c5eca7138ac1c7be0cfb551c1063d79a9f0c3"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "cms",
+    "cms" : {
+      "size" : 112770,
+      "sha256" : "a859f24802ca228b8ef7d8c12e37fce8a98c4a94b4948aa3ad42980bdcfb2258",
+      "version" : 1,
+      "signers" : 1,
+      "encapsulated_content" : {
+        "sha256" : "b86b02d26a6ede1f1c0efdaee15703c8f085c65171e27701433987013e884539",
+        "sha512" : "5904a0f56006d6bf73586453ceb75900123c3d0828ff90f4a996b4c940e102b3c2fceeabf96c1b212e93a91564f1f849132380ea4d0af89e5e9e92936898fa1f",
+        "sha3-512" : "7b882f63894b8ec333460d9e5f4c8cc4cdf4218fa77d68809a877b371f5d5e9d1d4ed1fb1e026cba47bebd41a2180c9af8d83aa7b4b6f0e5c918f2c0e977991e"
+      }
+    }
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-2FDDA15F8324523F8CA5013F2966EEB821B889B1A362CA2357FA6ECC08C8F65C",
+        "signature_filename" : "Signature-C-B-LTA-10.p7m",
+        "format" : "CAdES-A",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=Andrea Röck,2.5.4.42=#1306416e64726561,2.5.4.4=#0c0552c3b6636b,O=Cryptolog,C=FR",
+          "serial" : "385117278380921",
+          "sha256" : "21c69a32dc857a0a0ba807126c048009a40a348546cb4e0ae85143d59cd1dae0",
+          "not_before" : "2015-06-11T09:44:35Z",
+          "not_after" : "2016-06-11T09:44:35Z"
+        },
+        "claimed_signing_time" : "2015-07-01T15:43:23Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "b86b02d26a6ede1f1c0efdaee15703c8f085c65171e27701433987013e884539",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2015-07-01T15:43:53.993Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "ARCHIVE_TIMESTAMP",
+            "archive_type" : "CAdES_V2",
+            "production_time" : "2015-07-01T15:44:04.394Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "ARCHIVE_TIMESTAMP",
+            "archive_type" : "CAdES_V3",
+            "production_time" : "2015-07-01T15:44:04.493Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

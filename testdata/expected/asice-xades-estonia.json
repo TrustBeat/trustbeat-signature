@@ -1,0 +1,132 @@
+{
+  "id" : "asice-xades-estonia",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-A-EE_AS-19.asice",
+    "size" : 8347,
+    "digests" : {
+      "sha256" : "d6f1d33062714840a52bb4758c142ce2a08c92d68bf20a792453f92b3352031c",
+      "sha512" : "daa12d2e11eb48080ef62883b585f2019e84dcb629b4b3aa512066b71985fdc94855efdf62ae4837d1c37bf25b512af94dfd8616e01c2fdf08d480f8f7250d5e",
+      "sha3-512" : "855e9a92099cf65924b99ea45b59125e99c66214d5b28475309fa17d3e67d4b87c660e0b3eecaeb3b70a8c6aec03ad99c4715236c97c0426ebb555359e8cb133"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "asic",
+    "mimetype" : "application/vnd.etsi.asic-e+zip",
+    "data_objects" : [
+      {
+        "name" : "0123456789~#%&()=`@{[]}'.txt",
+        "size" : 4,
+        "digests" : {
+          "sha256" : "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b",
+          "sha512" : "ea2fe56bb8c1fb5ada84963b42ed71b764a74b092d75755173ade06f2f4aada9c00d6c302e185035cbe85fdff31698bca93e8661f0cbcef52cf2ff65864fd742",
+          "sha3-512" : "bab42b395fa5977839de429d3ccac83d6df26c04217495783713affa104bceb0a2342475627e17d2c7b3b1f7fb3aa098ecd5bf572ab1d55db05bb1a352bb42f9"
+        }
+      }
+    ],
+    "meta_inf" : [
+      {
+        "name" : "META-INF/manifest.xml",
+        "size" : 379,
+        "sha256" : "92fd90bed8f25e7260f91480441d24b3020a6bfdc5ea17a595b1ac03ed66901e"
+      },
+      {
+        "name" : "META-INF/signatures0.xml",
+        "size" : 14821,
+        "sha256" : "3c11de30662b5d8458c1468ae97d54798ecc98cb888c6b33e1b28d938f3e36b3"
+      }
+    ],
+    "xml_signatures" : [
+      {
+        "entry" : "META-INF/signatures0.xml",
+        "signatures" : [
+          {
+            "id" : "S0",
+            "placement" : "embedded",
+            "canonicalization" : "http://www.w3.org/2006/12/xml-c14n11",
+            "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+            "signed_info_c14n_sha256" : "edc0cfb58f1c3e3aabcec090f6ebf8ba01dcde2c07ec93be41efad8bd8eed93e",
+            "inherited_namespaces" : [
+              "xmlns:asic",
+              "xmlns:ds",
+              "xmlns:xades"
+            ],
+            "inherited_xml_attributes" : [],
+            "references" : [
+              {
+                "uri" : "0123456789~%23%25%26%28%29%3D%60%40%7B%5B%5D%7D%27.txt",
+                "type" : "",
+                "transforms" : [],
+                "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+                "digest" : "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b"
+              },
+              {
+                "uri" : "#S0-SignedProperties",
+                "type" : "http://uri.etsi.org/01903#SignedProperties",
+                "transforms" : [],
+                "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+                "digest" : "7f8448303ec1e7f382e0fb8612cd0bc09e2d75082ec0d9b7bd3e76fd0e5ba175"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cms_signatures" : []
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "container_type" : "ASiC-E",
+    "signatures" : [
+      {
+        "id" : "S-7F53C89282CCA2267B08EC1F0BA01C5ACC55CE3FDF2A1483725777FCD15011D8",
+        "signature_filename" : "META-INF/signatures0.xml",
+        "format" : "XAdES-BASELINE-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130b3336373036303230323130,2.5.4.42=#0c055645494b4f,2.5.4.4=#0c0753494e49564545,CN=SINIVEE\\,VEIKO\\,36706020210,OU=digital signature,O=ESTEID,C=EE",
+          "serial" : "138113704091925806741842900129975503991",
+          "sha256" : "0446cb4cc1dd99d0839a202b6be0f743d146cf03807f484ba4ec588e645d7da0",
+          "not_before" : "2012-01-25T09:09:05Z",
+          "not_after" : "2017-01-23T21:59:59Z"
+        },
+        "claimed_signing_time" : "2014-11-05T09:26:19Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "0123456789~#%&()=`@{[]}'.txt",
+            "name" : "0123456789~#%&()=`@{[]}'.txt",
+            "alg" : "SHA256",
+            "digest" : "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#S0-SignedProperties",
+            "alg" : "SHA256",
+            "digest" : "7f8448303ec1e7f382e0fb8612cd0bc09e2d75082ec0d9b7bd3e76fd0e5ba175",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2014-11-05T09:26:25Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

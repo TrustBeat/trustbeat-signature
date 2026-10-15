@@ -1,0 +1,398 @@
+{
+  "id" : "pades-five-signatures-document-timestamp",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "pades-5-signatures-and-1-document-timestamp.pdf",
+    "size" : 335556,
+    "digests" : {
+      "sha256" : "962dd61443f8c124aa029bef2d2150712ed2bc895b2646f38af5f0f9d7bedc8e",
+      "sha512" : "da9eec42f78d67981472886281a8a2a10be572c50ddfc8227b55523e264277052bc3456a9535cf6d6787d1120d0d44a884f187c24ce64365e06156f583fd91e5",
+      "sha3-512" : "1cee1d0cd22657e10c5ec1c22b19b1c14d3d0f256a5d651accbbb3e04421202ab304d57f65041f71dae07fdce98a1cc6bc493958950ab353d7af4438a19da583"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          91747,
+          124517,
+          723
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "93dddeaee7a6297fb5c2bdbb1d69c86d0047da5b997b9af3c0fe7aaca059c67d",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 9516,
+          "sha256" : "498a5dd80856d156535e4adbe24d498bebdb9e647f90632294f9f9e642be2b64",
+          "version" : 3,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          126092,
+          158862,
+          626
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "3b1b54873f97701b612cf64c84c4a46307038ba4cc53d59eb174a99cde13847d",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 9978,
+          "sha256" : "9fb8407cd20a8cf3e100999e05c7a43fc939296c4fa2ade2d940530a5fb56113",
+          "version" : 3,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          160367,
+          193137,
+          642
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "9916e27f1ae61bb02e4270392431f5256b3e727ea7e3753250a2a0c0a85d07f6",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 7447,
+          "sha256" : "13fbe96c76369684ed5bded45091e088a7b2898542d5b9fc9d4dd9b48f139d53",
+          "version" : 3,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          194686,
+          227456,
+          644
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "b376cc9fbb49e16cb11507a61b792949027477b9c648b320939ff7e778ef115c",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 8684,
+          "sha256" : "a82593adaa6f25d5855911a01be1f45bc5918aeaef789a11611f3562f2a67c7e",
+          "version" : 3,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          229036,
+          261806,
+          601
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "183edca6259f1454e2a52a9b8d9198a0ac38d6f42710932e00f0a888511f64db",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 7831,
+          "sha256" : "9d25546fc31f19971616e2659068cd2f5dedd7f091cf67e85b2982ff97b68ff9",
+          "version" : 3,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "DocTimeStamp",
+        "sub_filter" : "ETSI.RFC3161",
+        "byte_range" : [
+          0,
+          316098,
+          335044,
+          512
+        ],
+        "covers_whole_file" : true,
+        "signed_range_sha256" : "72edd1a1b93c8e23da4568043f45fdc60da63dc162e3db8e181a92ed1b9c5a4f",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 3542,
+          "sha256" : "b3a3d298efc2086488ae7aa5f0031a75ff08a9eb471aefa4d3a6b73c7e052c53",
+          "version" : 3,
+          "signers" : 1,
+          "encapsulated_content" : {
+            "sha256" : "40270996dc6e459893d7d2d068f878d0c55ef5a14eedddf3c9d3f6b511128e37",
+            "sha512" : "52b3902ecc06b3b11c6fd92f441005b646e6b2cf0cc7af4d2f866bed4adb327b0ced9891627ded666b9664a0747e7df0ad3c56fb21073a5d5b04046c9120f53b",
+            "sha3-512" : "cc2fae16d926f3326669b12dabed0d029c11a79d7bc880f1e90652d8046c0557aca5d658e787025b8781db6a3d66bf4145b93326fcb708a500b9b5971f21c4ea"
+          }
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-583253AFD4A055E3565B183ED502A91803E897BAF6DAD9C0CDBB52F15D886D91",
+        "signature_filename" : "pades-5-signatures-and-1-document-timestamp.pdf",
+        "format" : "PDF-NOT-ETSI",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#1310504e4f534b2037353033333037343832,2.5.4.12=#0c04496e672e,2.5.4.42=#0c055065746572,2.5.4.4=#0c06527962c3a172,CN=Peter Rybár,OU=SIBEP,O=Narodny bezpecnostny urad,L=Bratislava,C=SK",
+          "serial" : "20709",
+          "sha256" : "4f807bd663b32fd5f324fcae0854450ff6a2ed0835530dc6d06c9047cfcf7c36",
+          "not_before" : "2011-01-19T13:42:48Z",
+          "not_after" : "2011-12-31T21:59:00Z"
+        },
+        "claimed_signing_time" : "2011-05-05T09:06:38Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "SIG_CRYPTO_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "93dddeaee7a6297fb5c2bdbb1d69c86d0047da5b997b9af3c0fe7aaca059c67d",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          91747,
+          124517,
+          723
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2011-05-05T09:07:19Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "DOCUMENT_TIMESTAMP",
+            "archive_type" : "PAdES",
+            "production_time" : "2019-12-05T15:34:02.572Z",
+            "imprint_found" : true,
+            "imprint_intact" : true,
+            "pdf_byte_range" : [
+              0,
+              316098,
+              335044,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "S-6E0EF3197C74C9A5AC648AB0790214E6E72041ECF2C3A6C5C8DBD93D6341121D",
+        "signature_filename" : "pades-5-signatures-and-1-document-timestamp.pdf",
+        "format" : "PDF-NOT-ETSI",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=Peter Rybár,OU=SIBEP,O=Narodny bezpecnostny urad,L=Bratislava,C=SK",
+          "serial" : "20715",
+          "sha256" : "63792c6f85f5d489832f8ffc3a0a0af19fdd4659ffa85372eef25469b0566418",
+          "not_before" : "2011-02-17T08:13:36Z",
+          "not_after" : "2014-02-17T08:13:33Z"
+        },
+        "claimed_signing_time" : "2011-05-05T09:19:40Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "SIG_CRYPTO_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "3b1b54873f97701b612cf64c84c4a46307038ba4cc53d59eb174a99cde13847d",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          126092,
+          158862,
+          626
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2011-05-05T09:19:46Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "DOCUMENT_TIMESTAMP",
+            "archive_type" : "PAdES",
+            "production_time" : "2019-12-05T15:34:02.572Z",
+            "imprint_found" : true,
+            "imprint_intact" : true,
+            "pdf_byte_range" : [
+              0,
+              316098,
+              335044,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "S-8394852657AB72BD74951BCD5013319C163DE97E1D59F8BBF7937963317E2576",
+        "signature_filename" : "pades-5-signatures-and-1-document-timestamp.pdf",
+        "format" : "PDF-NOT-ETSI",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#1310504e4f534b2035343037303231393833,2.5.4.5=#130e494341202d203130313530363933,1.2.840.113549.1.9.1=#16166772756e6e65727061766f6c40676d61696c2e636f6d,L=Bratislava\\, Húščavova 1150/1\\, 84101,ST=Bratislavský,CN=Ing. Pavol Grünner,C=SK",
+          "serial" : "10527039",
+          "sha256" : "5f7db6aa051ca3384fce329513e5474706a2b2c5fa2edcab1ff3984ceec292d7",
+          "not_before" : "2010-01-28T12:06:28Z",
+          "not_after" : "2011-01-28T12:06:28Z"
+        },
+        "claimed_signing_time" : "2011-01-11T12:31:44Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "SIG_CRYPTO_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "9916e27f1ae61bb02e4270392431f5256b3e727ea7e3753250a2a0c0a85d07f6",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          160367,
+          193137,
+          642
+        ],
+        "timestamps" : [
+          {
+            "type" : "DOCUMENT_TIMESTAMP",
+            "archive_type" : "PAdES",
+            "production_time" : "2019-12-05T15:34:02.572Z",
+            "imprint_found" : true,
+            "imprint_intact" : true,
+            "pdf_byte_range" : [
+              0,
+              316098,
+              335044,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "S-A550D143EAD19F588080F6FF44DE475C326E8BA5EC4A5905D2B689A2A19C913F",
+        "signature_filename" : "pades-5-signatures-and-1-document-timestamp.pdf",
+        "format" : "PDF-NOT-ETSI",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#1310504e4f534b2035343037303231393833,2.5.4.5=#130e494341202d203130313530363933,1.2.840.113549.1.9.1=#16166772756e6e65727061766f6c40676d61696c2e636f6d,L=Bratislava\\, Húščavova 1150/1\\, 84101,ST=Bratislavský,CN=Ing. Pavol Grünner,C=SK",
+          "serial" : "10527039",
+          "sha256" : "5f7db6aa051ca3384fce329513e5474706a2b2c5fa2edcab1ff3984ceec292d7",
+          "not_before" : "2010-01-28T12:06:28Z",
+          "not_after" : "2011-01-28T12:06:28Z"
+        },
+        "claimed_signing_time" : "2011-01-11T12:33:44Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "SIG_CRYPTO_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "b376cc9fbb49e16cb11507a61b792949027477b9c648b320939ff7e778ef115c",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          194686,
+          227456,
+          644
+        ],
+        "timestamps" : [
+          {
+            "type" : "DOCUMENT_TIMESTAMP",
+            "archive_type" : "PAdES",
+            "production_time" : "2019-12-05T15:34:02.572Z",
+            "imprint_found" : true,
+            "imprint_intact" : true,
+            "pdf_byte_range" : [
+              0,
+              316098,
+              335044,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "id" : "S-9A35ABEA78868EC5AA9DED167728ABEB840776562CC5E07F8327C5FC47E98947",
+        "signature_filename" : "pades-5-signatures-and-1-document-timestamp.pdf",
+        "format" : "PDF-NOT-ETSI",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#1310504e4f534b2036363132333136323035,C=SK,L=Bratislava,OU=testovacie ucely,O=NBU SR,2.5.4.4=#0c07436872656e6b6f,2.5.4.42=#0c044976616e,CN=Ivan Chrenko",
+          "serial" : "16782082",
+          "sha256" : "6ca650ff093aee46e8542d6f319124d54394424b0341e18dc47c7c46f96f1eff",
+          "not_before" : "2010-08-09T11:48:41Z",
+          "not_after" : "2011-08-09T11:48:41Z"
+        },
+        "claimed_signing_time" : "2011-05-05T09:59:50Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "SIG_CRYPTO_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "183edca6259f1454e2a52a9b8d9198a0ac38d6f42710932e00f0a888511f64db",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          229036,
+          261806,
+          601
+        ],
+        "timestamps" : [
+          {
+            "type" : "DOCUMENT_TIMESTAMP",
+            "archive_type" : "PAdES",
+            "production_time" : "2019-12-05T15:34:02.572Z",
+            "imprint_found" : true,
+            "imprint_intact" : true,
+            "pdf_byte_range" : [
+              0,
+              316098,
+              335044,
+              512
+            ]
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

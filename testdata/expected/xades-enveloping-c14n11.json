@@ -1,0 +1,104 @@
+{
+  "id" : "xades-enveloping-c14n11",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "10963_signed.xml",
+    "size" : 236437,
+    "digests" : {
+      "sha256" : "425f6635178775df374b24a5606a5f249b9dccd7bb21c2e1c71bbeb14088a56a",
+      "sha512" : "bb9423b832c1de49ee398ac92e219eab2c396e7d2521edbc3d2557499d89e73154d7dd1ee3b6c043af6c08f4cb263f4ab437c972618d00fc1c93a8c155fa5a3c",
+      "sha3-512" : "797d937c1a12e19b01b23b4a53004b6ce084faa70efc8f70d6ee8cf22eef322adff332e9ab329a7a09ed7e2a2b5d4da8005e4148bdcd0a0a06c4b8ebeef49081"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signer-T-1516693867369",
+        "placement" : "document-element",
+        "canonicalization" : "http://www.w3.org/2006/12/xml-c14n11#WithComments",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "f3a2f16b2f1b02d6d71a03405eea16a5ed8478b285d61dd4b1db5c1a2590ba0f",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#xpointer(id('SignedObject-1516693867353'))",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "9723e7641306f30568f749914c9b57e4ff7f5a70bc4e7ac9e3a077f0bddfcc9f"
+          },
+          {
+            "uri" : "#SignedProperties-Signer-T-1516693867369",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "baed7743ce4ba05272030e7df4e140c8fb7f4b29889c30da40af15feafd6ca3c"
+          },
+          {
+            "uri" : "#KeyInfo-Signer-T-1516693867369",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "8e65e5b51bcbf4a38062b0e089dae51326912862056c5d61c20435261edc7b29"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-FDAB58A4A28AEEFA71826CA8010B2F51B036E33D47157535997DACEB06A2FF95",
+        "signature_filename" : "10963_signed.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.46=#131750524f562d333434332d31353131393533323135333038,CN=BANCOBPM SGS,2.5.4.5=#131349543a53475342434239394330384c37383158,2.5.4.42=#0c0842414e434f42504d,2.5.4.4=#0c03534753,O=BANCO BPM/09722490969,C=IT",
+          "serial" : "2135198468089135219",
+          "sha256" : "c6a0eac5cfb8e158630ec67eb5e607614a3414153984e86ff2ddd9278fb2e4f3",
+          "not_before" : "2017-11-29T10:54:53Z",
+          "not_after" : "2022-08-16T10:23:11Z"
+        },
+        "claimed_signing_time" : "2018-01-23T07:51:07Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "XPOINTER",
+            "uri" : "#xpointer(id('SignedObject-1516693867353'))",
+            "alg" : "SHA256",
+            "digest" : "9723e7641306f30568f749914c9b57e4ff7f5a70bc4e7ac9e3a077f0bddfcc9f",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties-Signer-T-1516693867369",
+            "alg" : "SHA256",
+            "digest" : "baed7743ce4ba05272030e7df4e140c8fb7f4b29889c30da40af15feafd6ca3c",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#KeyInfo-Signer-T-1516693867369",
+            "alg" : "SHA256",
+            "digest" : "8e65e5b51bcbf4a38062b0e089dae51326912862056c5d61c20435261edc7b29",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

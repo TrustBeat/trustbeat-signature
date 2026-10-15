@@ -1,0 +1,80 @@
+{
+  "id" : "pades-modified-after-signature",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "modified_after_signature.pdf",
+    "size" : 786071,
+    "digests" : {
+      "sha256" : "0e41604c8a394bb2cb7aa402cfa6433ce64e49746668b406764561bfc34fdbcf",
+      "sha512" : "a05561d3e6388152d09e45e933dded2e1250202e4d2e257a8f133c64410cc49283fd13a156a037e6054d30a7e5aa23f5f86b49656604d93af735ced8e0c8d1fd",
+      "sha3-512" : "9cd6739e21729ae62b905fc977769153a634065e159a1bce5a2207f3a0878437fe65dcec219cfaf428491fafef781e90e51ee185e7f5e4d72409d058ab3c95c1"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          575649,
+          632483,
+          10206
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "51f0a645cfbd0eb5eb478dfb9d77e75e0849192768b6fd354c7e72558052afcf",
+        "cms" : {
+          "encoding" : "ber-indefinite",
+          "size" : 5796,
+          "sha256" : "b775eef16ea71ede4dcee35c9601c4bd806fef4a192693e10fd2ac5ff3a1d865",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-942C192223BEED53A290919A8F79C201359F69D20BF225B53C675EBFADBE39FB",
+        "signature_filename" : "modified_after_signature.pdf",
+        "format" : "PAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "1.2.840.113549.1.9.1=#161c61686d65642e6d6567646963684074756e697369612e676f762e746e,CN=AHMED MEGDICH,OU=DIRECTION GENERALE DES TECHNOLOGIES DE L INFORMATION,O=MTCEN,C=TN",
+          "serial" : "64068198419080663519816642184352089969",
+          "sha256" : "08059f6b43f00063aedca3499225c289afb2f0c9fcb324a3c07ffa3477748df8",
+          "not_before" : "2016-10-03T00:00:00Z",
+          "not_after" : "2018-10-02T23:59:59Z"
+        },
+        "claimed_signing_time" : "2018-01-04T10:53:57Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "51f0a645cfbd0eb5eb478dfb9d77e75e0849192768b6fd354c7e72558052afcf",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          575649,
+          632483,
+          10206
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

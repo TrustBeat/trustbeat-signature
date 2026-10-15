@@ -1,0 +1,25 @@
+{
+  "id" : "unsigned-pdf",
+  "extractor" : "refuse:unsigned",
+  "file" : {
+    "name" : "doc.pdf",
+    "size" : 36535,
+    "digests" : {
+      "sha256" : "fe731946f09e25329e8299b994ee22c686a8423253715af8cfe9b725c1d09c95",
+      "sha512" : "29cb15f34825e8ed49f905d2396d5bc5181a1922ec53e0ee50b0e8e48381a1b5551c0b540a7bbca2be9afaccb96211e41d1d721efa0e5d39241b30e19d499c60",
+      "sha3-512" : "f809018f500016646e3c27da750a5f02917fac4e223a9997cd8bca3e1871835ef3c7d9521fcbdce1260c0a9e51416f96fd9d76894a681ac5339d1a8804f61089"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : []
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [],
+    "timestamps" : []
+  }
+}

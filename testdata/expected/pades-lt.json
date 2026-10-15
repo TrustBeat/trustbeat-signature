@@ -1,0 +1,87 @@
+{
+  "id" : "pades-lt",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "doc-firmado-LT.pdf",
+    "size" : 49311,
+    "digests" : {
+      "sha256" : "130ff45493c0cff873b44662bf9bb609820fabe4a0e666604ae1ac2795059eaf",
+      "sha512" : "293e4f995608a0eed5a30922432a604e0c533446fc0645bd53c0986197a7aeed41952e3f2058e36df0ccb608c07b8e30907c1727576a7366635aa3d0d62a2d19",
+      "sha3-512" : "bdd9e20e676b28478ee1a4867723613c44472861bda8307f2ba208bb55d8137fec7ae8b907074c64a995e098d4a074f0e82a7ff52cab376e287a48c7cf9d1eb4"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          1383,
+          28009,
+          307
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "ac8a1e171f3ccd4ce63cb52834696e34cbd9451864d128d9496cba782f7ed38f",
+        "cms" : {
+          "encoding" : "ber-indefinite",
+          "size" : 13186,
+          "sha256" : "4fa1528c53cc0ced59b5418eda57dd8b771ab6d01bce83e10d26f74c5b966d19",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-86772624E4E5ED960830E28A0C6F34F4A40E26CD1C93E7BCD1181DF3CC5BE33C",
+        "signature_filename" : "doc-firmado-LT.pdf",
+        "format" : "PAdES-BASELINE-LT",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=FRANCISCO DE LA PEÑA FERNANDEZ (FIRMA),OU=CIUDADANO,O=PERSONA FISICA,C=CR,2.5.4.42=#13094652414e434953434f,2.5.4.4=#0c154445204c41205045c39141204645524e414e44455a,2.5.4.5=#13104350462d30382d303131392d30353932",
+          "serial" : "446015286740114793238795057540663224406450166",
+          "sha256" : "d8363bd6bd2fe30c4191cd5bb05a97e7556efe01f207c459d81dec58186bf665",
+          "not_before" : "2017-02-17T19:52:16Z",
+          "not_after" : "2021-02-16T19:52:16Z"
+        },
+        "claimed_signing_time" : "2018-09-15T22:10:35Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "ac8a1e171f3ccd4ce63cb52834696e34cbd9451864d128d9496cba782f7ed38f",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          1383,
+          28009,
+          307
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2018-09-15T22:10:37Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

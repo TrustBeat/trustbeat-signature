@@ -1,0 +1,114 @@
+{
+  "id" : "xades-enveloped-inclusive-inherited-ns",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-FR_NOT-3.xml",
+    "size" : 16308,
+    "digests" : {
+      "sha256" : "0f7f8fcefb793dbbb438e3a877643785fa94c7ae48fa37ff06a98327ea538ab1",
+      "sha512" : "b62113038aefab7d038111e26764826d8bf686a27a514f9549b62f92c35f0525fe68b59c5542bedec0df971f87a53d9e0adac395a73207febeb57dcb97d0278d",
+      "sha3-512" : "caa25cf71389d0c4ba80cf5e307034ea7e0116d05299bd094476890b86b7294cf4a9fa14f9b1a1ee3a0c8ee39a1215401bf8bae7b5cdf074b23370c07a204f4a"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "REALNOT",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "253243d03a662df4ab7f1482003035172346fce342e03bc639f794e3169d1eea",
+        "inherited_namespaces" : [
+          "xmlns",
+          "xmlns:xsi"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature",
+              "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "5533bc3e794ff12c3561d8b32c9b6445c10c5fb6286dcfa1df4e4865e9287520"
+          },
+          {
+            "uri" : "#REALNOT-SignedProperties",
+            "type" : "http://uri.etsi.org/01903/v1.2.2#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "abc841f171c34238c13e616fb5295c9f1c2ef534c747b89859a0325dc4e1ef06"
+          },
+          {
+            "uri" : "#REALNOT-doc-scsinfo",
+            "type" : "http://www.w3.org/2000/09/xmldsig#Object",
+            "transforms" : [
+              "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "580c0b28e753773989dc674781f56c73d31b422a4e651525e367b7f8801a260c"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-EAB4546BD13E769B4E92C8A572A8C3DF43D2583F56941B066E849A109F39FDF1",
+        "signature_filename" : "Signature-X-FR_NOT-3.xml",
+        "format" : "XAdES-BES",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=Serveur de signature p12 pp01,OU=0002 509242988,O=REAL.NOT,C=FR",
+          "serial" : "58",
+          "sha256" : "dcfe534acfbb5a4ca2ab5b0a29c57db1a7d86e7074dcc0a12c00a9f258148f7d",
+          "not_before" : "2014-11-03T13:57:14Z",
+          "not_after" : "2016-11-02T13:57:14Z"
+        },
+        "claimed_signing_time" : "2014-11-07T08:48:27.803Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "5533bc3e794ff12c3561d8b32c9b6445c10c5fb6286dcfa1df4e4865e9287520",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#REALNOT-SignedProperties",
+            "alg" : "SHA256",
+            "digest" : "abc841f171c34238c13e616fb5295c9f1c2ef534c747b89859a0325dc4e1ef06",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "OBJECT",
+            "uri" : "#REALNOT-doc-scsinfo",
+            "alg" : "SHA256",
+            "digest" : "580c0b28e753773989dc674781f56c73d31b422a4e651525e367b7f8801a260c",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id" : "xades-enveloping-signed-properties-mismatch",
+  "extractor" : "refuse:digest-mismatch",
+  "file" : {
+    "name" : "valid-xades.xml",
+    "size" : 10492,
+    "digests" : {
+      "sha256" : "581943fbd7f2e7105182a3dbd6baae31bf2df21231872bb48e8daac06d4bb4e8",
+      "sha512" : "1abe76f65dcff3b0a67a05506b9100360850a83d1414ff4d57129cca1b31e81e8c70eb2b69e06a9a2f6b073e2d4fc0c7d8c8a704e4725c5983057feca98752d1",
+      "sha3-512" : "cc3c952540967d7711a0fe6f94eef432446a4cecc87287555f3b3102863a75c5e609385f3dfceb82bf6cf3efc7891086d441323ae9533d71f79102a1c604e773"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "id-93ef2bbbf61754c3735a8f0d34aff556",
+        "placement" : "document-element",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "9e14a3626a856050069d6164a10116deda0b8fba9a82a2d3a597d8ac5b078dff",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#o-id-1",
+            "type" : "http://www.w3.org/2000/09/xmldsig#Object",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#base64"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "ebc02b9de23d3e1381272b63e6c3ffcc47b04760e414e6f17b0318d70894bda9"
+          },
+          {
+            "uri" : "#xades-id-93ef2bbbf61754c3735a8f0d34aff556",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "359a48f9d2c5a9c68ffdf647d2e88db6c6f87a9f3c3e83c222f11c50e0dd3fde"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-A8A5D2BF472E47287E68DDCAE950F0EB12EBA0E7C6F3843C10E5228003507A7A",
+        "signature_filename" : "valid-xades.xml",
+        "format" : "XAdES-BASELINE-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "O=DSS-test,CN=SignerFake",
+          "serial" : "71449483495842",
+          "sha256" : "47412a89ae1b2ba9a58a95f0cc7abcbb714eb25a03bbad6915c81b80d169e144",
+          "not_before" : "2015-12-06T10:18:15Z",
+          "not_after" : "2015-12-17T10:18:15Z"
+        },
+        "claimed_signing_time" : "2015-12-07T10:18:15Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "HASH_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "OBJECT",
+            "uri" : "#o-id-1",
+            "alg" : "SHA256",
+            "digest" : "ebc02b9de23d3e1381272b63e6c3ffcc47b04760e414e6f17b0318d70894bda9",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#xades-id-93ef2bbbf61754c3735a8f0d34aff556",
+            "alg" : "SHA256",
+            "digest" : "359a48f9d2c5a9c68ffdf647d2e88db6c6f87a9f3c3e83c222f11c50e0dd3fde",
+            "found" : true,
+            "intact" : false
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2015-12-07T10:18:16Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

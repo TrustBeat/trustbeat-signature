@@ -1,0 +1,104 @@
+{
+  "id" : "xades-detached-with-transform",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "xades-detached-with-transform.xml",
+    "size" : 5343,
+    "digests" : {
+      "sha256" : "98d5ca85faf78ce41e3b69f6e22856bd22494205c056253f38251ef0f01e18d4",
+      "sha512" : "9fa3d86161e1d94d6bc31b525646a2f90bee476715de2a814bb247280b792ae6e422ab333b97ffbbb4330200234a620df0560eef257857410c98063723775893",
+      "sha3-512" : "16f5579fd7a180a5f5c5a315f2f6f2188ff27b65cc2e6c213ae93f16211227e7600bcb0c8e2b6788c47233b39ff92e6c552a6e92353922317305a6dac1cf4182"
+    }
+  },
+  "data" : [
+    {
+      "name" : "sample-c14n.xml",
+      "size" : 783,
+      "digests" : {
+        "sha256" : "ee518dae9a09ff9c19fde39d85e31af153d8f5ca54a7a23eb8201311764c7f28",
+        "sha512" : "769af32346c2018c20a83dbc1ca1e02035953ad5d55a4f6348da3a9146d7bc73418480e09b57598d021483cdcf5c736336cd14168b69b9bc3121e38e6e8cbe7c",
+        "sha3-512" : "3fa4e24ff584c87eecc4d4941af79a580a390cca2324a42311407d6bcbac4f31f35a14297d7bb523a0e4f63c2d28fc3371bc849345a874962e7d9bc49a276588"
+      }
+    }
+  ],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "id-61826d254bee2174190fd923a5805ea9",
+        "placement" : "document-element",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "86d1fc2dd0be4e535aa88f1964f5d15fc645e7bb0004eaa0cb9f706929fdc2f5",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "sample-c14n.xml",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "fd38815e408eb66d1b49d3ae9295c7b6a4aee86e443d17f0c981fd0c9f58b421"
+          },
+          {
+            "uri" : "#xades-id-61826d254bee2174190fd923a5805ea9",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "3eda2b4da53eb63e4c9a4d2c8e76bad548646256c6c39a49229690de606a1f44"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-02A74A068FFC0055F13D2433B6E4BE6C0768D35409C501F0C855E92DBE348308",
+        "signature_filename" : "xades-detached-with-transform.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=LU,OU=PKI-TEST,O=Nowina Solutions,CN=good-user",
+          "serial" : "10",
+          "sha256" : "c222dd8f2d2314677388734c7655167d96b0aa72f21be7b22575a09265bbe30d",
+          "not_before" : "2019-05-21T09:55:52Z",
+          "not_after" : "2021-03-21T10:55:52Z"
+        },
+        "claimed_signing_time" : "2020-04-27T14:31:04Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "sample-c14n.xml",
+            "name" : "sample-c14n.xml",
+            "alg" : "SHA256",
+            "digest" : "fd38815e408eb66d1b49d3ae9295c7b6a4aee86e443d17f0c981fd0c9f58b421",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#xades-id-61826d254bee2174190fd923a5805ea9",
+            "alg" : "SHA256",
+            "digest" : "3eda2b4da53eb63e4c9a4d2c8e76bad548646256c6c39a49229690de606a1f44",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

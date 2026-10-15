@@ -1,0 +1,119 @@
+{
+  "id" : "xades-enveloping-base64",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-ES-100.xml",
+    "size" : 47721,
+    "digests" : {
+      "sha256" : "207db6a7ef5cdb41e19bb8d23b5ffcbdefd1aff6ef3fa77e2786635d66186a86",
+      "sha512" : "303d93161b34e7d28f17090741673c515cb48a3a93504fe39888625ccdcd6d3d2616968355bb8a76ad179cee07e580a36d03d33f748ddeb571a31a632d44553f",
+      "sha3-512" : "91a6ab1e6fb64d6d7811b9a036b92de7c2b7c244fc41a64440ff51a6b19f9adab1277d91bacf585559ec4c304ba35f1b228a0fd3d59c9017907d89577f7872ac"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature-0c06554a-5560-450a-b750-4980c787d597-Signature",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+        "signed_info_c14n_sha256" : "91a25199c44fd57e39b1c2c3176c919425a59eb6d364eed791e217a8aa21bfd1",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#CONTENT-12d340de-491f-4149-9f5b-e0f229d697d8",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#base64"
+            ],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "6788f20aa6afe4b217476b648c3129f6699f2733"
+          },
+          {
+            "uri" : "#Signature-0c06554a-5560-450a-b750-4980c787d597-SignedProperties",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "37700cfde422618fa63397c0acc04182342037bc"
+          },
+          {
+            "uri" : "#Signature-0c06554a-5560-450a-b750-4980c787d597-KeyInfo",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "3510967461a6fc5d963964cdcf0c99d0f5287770"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-44576D907B8303CBCF4B2267DDFA9286DE73889ED078CDC28EEDA81AC326BB80",
+        "signature_filename" : "Signature-X-ES-100.xml",
+        "format" : "XAdES-X",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=SELLOMEDIO FICTICIO ACTIVO,2.5.4.5=#1309513338393033343948,OU=sello electrónico,OU=ZIURTAGIRI ONARTUA - CERTIFICADO RECONOCIDO,O=SELLOMEDIO FICTICIO ACTIVO,C=ES",
+          "serial" : "80673",
+          "sha256" : "bf6e83bb81416f214baf394909d85eb80ebd945a7c506d729062f366af23166b",
+          "not_before" : "2013-01-25T11:10:48Z",
+          "not_after" : "2016-01-25T11:10:48Z"
+        },
+        "claimed_signing_time" : "2013-12-10T14:49:45Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "#CONTENT-12d340de-491f-4149-9f5b-e0f229d697d8",
+            "alg" : "SHA1",
+            "digest" : "6788f20aa6afe4b217476b648c3129f6699f2733",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#Signature-0c06554a-5560-450a-b750-4980c787d597-SignedProperties",
+            "alg" : "SHA1",
+            "digest" : "37700cfde422618fa63397c0acc04182342037bc",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#Signature-0c06554a-5560-450a-b750-4980c787d597-KeyInfo",
+            "alg" : "SHA1",
+            "digest" : "3510967461a6fc5d963964cdcf0c99d0f5287770",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2013-12-10T16:40:28Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "VALIDATION_DATA_TIMESTAMP",
+            "production_time" : "2013-12-10T16:40:29Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

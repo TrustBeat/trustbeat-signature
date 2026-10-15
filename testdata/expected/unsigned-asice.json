@@ -1,0 +1,40 @@
+{
+  "id" : "unsigned-asice",
+  "extractor" : "refuse:unsigned",
+  "file" : {
+    "name" : "no-signature.asice",
+    "size" : 304,
+    "digests" : {
+      "sha256" : "4e67ed5529c8874ac068eb708c5eba5cfbffc2db6234c0a3981348efbe292a0d",
+      "sha512" : "c8116108f55b60ef7053f5f3c033173f74831572178d0df1caedbe71253d5db37028b6343d9417da70d7f27a96231a4283731d260f78f079782cada95ab1509c",
+      "sha3-512" : "e154933ca3f40c88047df4bae4eef7c69c36061ffeeec4dd806d78c98ddfa701280e999b6eb53e205ec97c86d6a6566502195be9ec18168d779a8a7a1c725878"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "asic",
+    "mimetype" : "application/vnd.etsi.asic-e+zip",
+    "data_objects" : [
+      {
+        "name" : "contract.txt",
+        "size" : 59,
+        "digests" : {
+          "sha256" : "634a0c91916c4a999fcad384924073ee9af6b18d61a6fd29649ca33b246c6256",
+          "sha512" : "b3f084b4fb649a57b08dcd303b55e4ceb6b71c1f3bbea950d8650f4fdcf28516444651d045b251a3fa49a92f6b3e72d9b1df1b88830325c62fc97e30b72c7a2e",
+          "sha3-512" : "c7525efe2133e7e9249001fdd7ae1088148098f4927a9d06a84731afb68d316c4802c36c2683fd77174b52ca4d21431060dc97a8aeecb6bc6db4b0514092a28c"
+        }
+      }
+    ],
+    "meta_inf" : [],
+    "xml_signatures" : [],
+    "cms_signatures" : []
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "container_type" : "ASiC-E",
+    "signatures" : [],
+    "timestamps" : []
+  }
+}

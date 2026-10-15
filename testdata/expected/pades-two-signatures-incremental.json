@@ -1,0 +1,133 @@
+{
+  "id" : "pades-two-signatures-incremental",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "hello_signed_INCSAVE_signed.pdf",
+    "size" : 235978,
+    "digests" : {
+      "sha256" : "af63353c955aaa66612d87e7340d19726b8127a138fd393dd67840c1dc905625",
+      "sha512" : "93e9403cbe8479f058b0490ba0afe1fe6e30bea22899a8ba6b5f2975cba8541f5065e5b312472a392b10f70561e89f4443f6296d29e897b9b5d7abd8c4f5b21d",
+      "sha3-512" : "905ea144452a0921a125195c6da205d7e0941c019c3dee9a721ae12a4afa3916a0c930c933b502f8137771e22bdac0b16ccf8c7c1dd535c75fe2199fd2f23bf9"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          196862,
+          215808,
+          313
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "39c6c103e36a9e8af67864b723538e62d17cdc465f1e38b85933ff2826a5fe35",
+        "cms" : {
+          "encoding" : "ber-indefinite",
+          "size" : 1929,
+          "sha256" : "108d665b591ca41d9da37260ae7e8c2051ed511f7d2efd3753a1c0554b9e2b5c",
+          "version" : 1,
+          "signers" : 1
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          216719,
+          235665,
+          313
+        ],
+        "covers_whole_file" : true,
+        "signed_range_sha256" : "f37a4ac5fc7cf137b067915c842d24a635199a466f693bdbace2e93f51d257af",
+        "cms" : {
+          "encoding" : "ber-indefinite",
+          "size" : 1929,
+          "sha256" : "24e82759a21f1944ae804cbacedee3df11f1b784d871ca71aee1303e25013f20",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-22391BCA72D47FF333C99584BD6D3002E118C3F7935F96A7205D21E6498DAF80",
+        "signature_filename" : "hello_signed_INCSAVE_signed.pdf",
+        "format" : "PAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.46=#13083135333734393637,2.5.4.4=#0c1b4d6f6e6163656c6c6954657374496e636172642030322032303136,2.5.4.42=#0c184d6172636f54657374496e63617264203032202032303136,2.5.4.5=#131349543a41414141414130304130304130303041,CN=MonacelliTestIncard 02 2016 MarcoTestIncard 02  2016,O=non presente,C=IT",
+          "serial" : "55609823618721925677174773084279051404",
+          "sha256" : "e370dea4d95a1e9221bf6ea2c51ac503cd0bbf3d6087396463e33144a0068fbc",
+          "not_before" : "2016-03-22T00:00:00Z",
+          "not_after" : "2019-03-22T23:59:59Z"
+        },
+        "claimed_signing_time" : "2016-08-12T16:07:03Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "39c6c103e36a9e8af67864b723538e62d17cdc465f1e38b85933ff2826a5fe35",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          196862,
+          215808,
+          313
+        ],
+        "timestamps" : []
+      },
+      {
+        "id" : "S-A3DC08D7269294F0031E83064485658EAE68B19DE0F99AEB1059360DD6C8D5AF",
+        "signature_filename" : "hello_signed_INCSAVE_signed.pdf",
+        "format" : "PAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.46=#13083135333734393637,2.5.4.4=#0c1b4d6f6e6163656c6c6954657374496e636172642030322032303136,2.5.4.42=#0c184d6172636f54657374496e63617264203032202032303136,2.5.4.5=#131349543a41414141414130304130304130303041,CN=MonacelliTestIncard 02 2016 MarcoTestIncard 02  2016,O=non presente,C=IT",
+          "serial" : "55609823618721925677174773084279051404",
+          "sha256" : "e370dea4d95a1e9221bf6ea2c51ac503cd0bbf3d6087396463e33144a0068fbc",
+          "not_before" : "2016-03-22T00:00:00Z",
+          "not_after" : "2019-03-22T23:59:59Z"
+        },
+        "claimed_signing_time" : "2016-08-12T17:00:34Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "f37a4ac5fc7cf137b067915c842d24a635199a466f693bdbace2e93f51d257af",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          216719,
+          235665,
+          313
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

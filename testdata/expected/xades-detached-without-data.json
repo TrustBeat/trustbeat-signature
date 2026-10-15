@@ -1,0 +1,91 @@
+{
+  "id" : "xades-detached-without-data",
+  "extractor" : "refuse:missing-data",
+  "file" : {
+    "name" : "xades-detached.xml",
+    "size" : 3939,
+    "digests" : {
+      "sha256" : "64354411507ac4cb79e5fb0ab72e44629775e1b8db334b555b7df66483486c1f",
+      "sha512" : "5656c67c243cf050ab9aafd36daffd14eb21131b010c2d2b316b9e77e2b9fa9ef2e3a99029d75a18d868a935be2b0ec71bc4b734611488b4f438b096060ad535",
+      "sha3-512" : "c1f6f28a9f2245def67e3acb6ddc8eac5822f634faf5bb0329323331899af14a027630ddc9c1c95eedb6de934351009a6a2012b206af689bcadf8a73e11f2e45"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "id-98ecc9e805491a6e5fc46a7535708c97",
+        "placement" : "document-element",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "285cbf51b81f2dd298030b6ef745664f264d71bf974003cf3fd7943fc63df773",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "sample.xml",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "91c0c73998f066155fb8386e8427821114666294c7e098f84667d5562df543d8"
+          },
+          {
+            "uri" : "#xades-id-98ecc9e805491a6e5fc46a7535708c97",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "5e1733a0da4dc8c12a7c1f971a0a3578c17973b87809b715d89f3ea63bbb7866"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-1B89DB2611E1A8760902865D129FE9E488D99612340B2D51A9D573CDCBC17301",
+        "signature_filename" : "xades-detached.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=LU,OU=PKI-TEST,O=Nowina Solutions,CN=sha3-good-user",
+          "serial" : "1100",
+          "sha256" : "e172c2416d3231a65fd7f200c005456402138f76d13f090f87c158aadf4f929c",
+          "not_before" : "2019-03-18T09:31:44Z",
+          "not_after" : "2021-01-18T09:31:44Z"
+        },
+        "claimed_signing_time" : "2020-03-26T09:54:41Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "SIGNED_DATA_NOT_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "sample.xml",
+            "alg" : "SHA256",
+            "digest" : "91c0c73998f066155fb8386e8427821114666294c7e098f84667d5562df543d8",
+            "found" : false,
+            "intact" : false
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#xades-id-98ecc9e805491a6e5fc46a7535708c97",
+            "alg" : "SHA256",
+            "digest" : "5e1733a0da4dc8c12a7c1f971a0a3578c17973b87809b715d89f3ea63bbb7866",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "id" : "xades-enveloped-xpath",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "TEST_S1a_C1a_InTL_VALID.xml",
+    "size" : 11563,
+    "digests" : {
+      "sha256" : "f47496e25c1b2edb1ab21364c8ba5176df579667fd709751af7c0102e78bb92c",
+      "sha512" : "2e5eb134dff0ca289fb4680c61f12c7c10ed78370e5a086edf0a3a897030304f1403c694e41eb07f3f93c3cb934e59b30ff6dda9a66a2ae60039a8cb6d6aabfc",
+      "sha3-512" : "21b072c36b09469085e2e113a52c4861be51211991be325586cdf2a33e1baa75df02eae90820f623fe647a6d2bd8feac2f3b8c86f27fa0aa932d938891bfe9ed"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "XSIG1",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "b83c6d8accb1c1e9c07dda72e3418fafbd989616f114f47861a48936ab82eb14",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature",
+              "http://www.w3.org/TR/1999/REC-xpath-19991116",
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "03ee1b4be59e8f3f87109e7339fddfaaf727427e87e934882d631bdf83490698"
+          },
+          {
+            "uri" : "#XSIGXADES1",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "5cd4fdeadb47c366d370abededf1f3476d9bf7641cd692ebcac4700a33484043"
+          },
+          {
+            "uri" : "#XSIGKEYINFO1",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "4e814e9554a6eaec2df434cd420138ac7eeef827922f45561c8e2ba957a3aa88"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-61F80AE31746B989737CD4A99815C2A3038E2B1030763BF6AF1FA1965D28236F",
+        "signature_filename" : "TEST_S1a_C1a_InTL_VALID.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.46=#13095a5a41413030303630,CN=DAMIANO DIEGO DE FELICE,2.5.4.5=#131349543a44464c444e4437365431354c31303956,2.5.4.42=#0c0d44414d49414e4f20444945474f,2.5.4.4=#0c0944452046454c494345,OU=Esercito Italiano,O=Ministero della Difesa/97355240587,C=IT",
+          "serial" : "6366313205909069094",
+          "sha256" : "a390d4d4774879ef567eb55875997a036ef3819e1ab515d3baaea29d62425d67",
+          "not_before" : "2014-10-02T10:40:21Z",
+          "not_after" : "2023-12-15T22:59:00Z"
+        },
+        "claimed_signing_time" : "2017-09-21T16:04:25.583Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "03ee1b4be59e8f3f87109e7339fddfaaf727427e87e934882d631bdf83490698",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#XSIGXADES1",
+            "alg" : "SHA256",
+            "digest" : "5cd4fdeadb47c366d370abededf1f3476d9bf7641cd692ebcac4700a33484043",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#XSIGKEYINFO1",
+            "alg" : "SHA256",
+            "digest" : "4e814e9554a6eaec2df434cd420138ac7eeef827922f45561c8e2ba957a3aa88",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      },
+      {
+        "id" : "S-7C9047A122D399183C2857612F4647B95B44DE3EE3EC05F6E0470067EF6EC35D",
+        "signature_filename" : "TEST_S1a_C1a_InTL_VALID.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : true,
+        "signing_certificate" : {
+          "subject" : "2.5.4.46=#13095a5a41413030303630,CN=DAMIANO DIEGO DE FELICE,2.5.4.5=#131349543a44464c444e4437365431354c31303956,2.5.4.42=#0c0d44414d49414e4f20444945474f,2.5.4.4=#0c0944452046454c494345,OU=Esercito Italiano,O=Ministero della Difesa/97355240587,C=IT",
+          "serial" : "6366313205909069094",
+          "sha256" : "a390d4d4774879ef567eb55875997a036ef3819e1ab515d3baaea29d62425d67",
+          "not_before" : "2014-10-02T10:40:21Z",
+          "not_after" : "2023-12-15T22:59:00Z"
+        },
+        "claimed_signing_time" : "2017-09-21T16:04:55.484Z",
+        "signature_intact" : false,
+        "signature_valid" : false,
+        "indication" : "TOTAL_FAILED",
+        "sub_indication" : "HASH_FAILURE",
+        "digest_matchers" : [
+          {
+            "type" : "COUNTER_SIGNATURE",
+            "uri" : "#XSIGVAL1",
+            "alg" : "SHA256",
+            "digest" : "e310db4f97d1a618ed1875078c1da005d6a9cea3671cd8f43d5111ef4f10c50c",
+            "found" : true,
+            "intact" : false
+          },
+          {
+            "type" : "COUNTER_SIGNED_SIGNATURE_VALUE",
+            "found" : true,
+            "intact" : false
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#XSIGXADES2",
+            "alg" : "SHA256",
+            "digest" : "f347ed7c2e9087c38760c19e08981f1abbaf58aec4e7661e8cd116526a2d6a70",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#XSIGKEYINFO2",
+            "alg" : "SHA256",
+            "digest" : "2315171b4e700854f5e67d5d95888ce6abca9f6792843196374b6079a0972882",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

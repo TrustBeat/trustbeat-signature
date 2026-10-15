@@ -1,0 +1,110 @@
+{
+  "id" : "xades-enveloped-exclusive",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-RO_TRA-15.xml",
+    "size" : 16746,
+    "digests" : {
+      "sha256" : "a48dae5eb6c283009297e0f03866b74b4e535e6aedaab3d289163a352c842c0c",
+      "sha512" : "1ac103265404b16e4f84f192fcfb8155ee1e1d84f7863bcc82f7b8cee2f31f93626a0db4a63d2f6fe54634e80430ea5b280a5a684cd6de08a325d294f675c4b3",
+      "sha3-512" : "b6aab81b1d58260d253781ae7f6ba2e02e16087b438410cad2fca034c40abbca59cb4c219ac8d94259f2bc9b1295cb0ea00013b7be8897e6bf445eafe167c850"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature-1104630516",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha512",
+        "signed_info_c14n_sha256" : "560651714faeb778b789b4d6aa7e94ee2e121d884233338c11517ff34401412f",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha512",
+            "digest" : "fb941fb8040dc4656c190635d52fa987c30bf35c6ce53834635717c2fc12113b3133f78489ab553d87c62ef224c7d416f1d331b3d6caf62d679957ceff1390d2"
+          },
+          {
+            "uri" : "#SignedProperties-1069289073",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "3e30cc23e9680f0b58968268a2e736a04b3cc11d"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-04C3C6D6B3BA1D17EB5E8AED0D34B70D251B1C0F6C75DAAE6F29F966CB9F52A1",
+        "signature_filename" : "Signature-X-RO_TRA-15.xml",
+        "format" : "XAdES-X",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=RO,2.5.4.5=#130d32303034313232333441415635,2.5.4.4=#0c05416e656369,2.5.4.42=#0c0d41647269616e2d566173696c65,CN=Adrian-Vasile Aneci",
+          "serial" : "130114610919472312325890885591559005888",
+          "sha256" : "38363d9c81ee02e0a4dd40be155d5705eab5c1be2e52e9db89477ff85a605850",
+          "not_before" : "2014-10-28T00:00:00Z",
+          "not_after" : "2015-10-28T23:59:59Z"
+        },
+        "claimed_signing_time" : "2014-11-10T20:39:56.293Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA512",
+            "digest" : "fb941fb8040dc4656c190635d52fa987c30bf35c6ce53834635717c2fc12113b3133f78489ab553d87c62ef224c7d416f1d331b3d6caf62d679957ceff1390d2",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties-1069289073",
+            "alg" : "SHA1",
+            "digest" : "3e30cc23e9680f0b58968268a2e736a04b3cc11d",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2014-11-10T20:39:25Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "VALIDATION_DATA_TIMESTAMP",
+            "production_time" : "2014-11-10T20:39:26Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "VALIDATION_DATA_REFSONLY_TIMESTAMP",
+            "production_time" : "2014-11-10T20:39:26Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

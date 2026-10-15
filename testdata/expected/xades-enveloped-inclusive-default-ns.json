@@ -1,0 +1,100 @@
+{
+  "id" : "xades-enveloped-inclusive-default-ns",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-UK_ASC-2.xml",
+    "size" : 16343,
+    "digests" : {
+      "sha256" : "7808ae95660f970471e8c0ce139c541543b92c6f1d6ccb5d481070056486afbc",
+      "sha512" : "459ac5b0c756190a0c7115c0e493520cc7dc593ddc2e6609869c858ee3a1adb0d6951153ad296b549abe4f1d9d2bbabda3063bd403fc924d64e307de426eb41c",
+      "sha3-512" : "852821a3e0001da7f7b03330fe8fe9fdf8d58793d3891c25a71623db8144887ef5191d71f2839762252341b894f6668d8612fcd7ecee6fc326875fb4acddc45d"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature_23746265944915",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "820e524c611fdc572a321993b38df3d3eb1abdc9586cc52df5fccaaf3a710682",
+        "inherited_namespaces" : [
+          "xmlns"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#SignedProperties_23746265944915",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "72e3c65641685ad6e7841a47905b46b605378dd0dee3a602384537e9d14a920e"
+          },
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "186af8519a9fdf28289e13f356a4a9e44d23d0e87ce8d2276d48946a6cba5263"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-61DEA3915FF3A07A5D3D6553CE812D35E01681A199ECA28E1E44587010B889EA",
+        "signature_filename" : "Signature-X-UK_ASC-2.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=Usman Sarwar,OU=R&D,O=Ascertia,1.2.840.113549.1.9.1=#161975736d616e2e7361727761724061736365727469612e636f6d,C=GB",
+          "serial" : "20931566896113367799",
+          "sha256" : "bfba9896c18055d565b43a7363c7e5beb1ecf42dee8424420d1b1a4fa1613c84",
+          "not_before" : "2016-04-18T14:27:50Z",
+          "not_after" : "2017-04-18T14:27:50Z"
+        },
+        "claimed_signing_time" : "2016-04-19T08:47:49Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties_23746265944915",
+            "alg" : "SHA256",
+            "digest" : "72e3c65641685ad6e7841a47905b46b605378dd0dee3a602384537e9d14a920e",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "186af8519a9fdf28289e13f356a4a9e44d23d0e87ce8d2276d48946a6cba5263",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "ALL_DATA_OBJECTS_TIMESTAMP",
+            "production_time" : "2016-04-19T08:47:49Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

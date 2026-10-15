@@ -1,0 +1,84 @@
+{
+  "id" : "cades-detached-qes",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "screenshot.png.signed_qes_detached.p7s",
+    "size" : 181096,
+    "digests" : {
+      "sha256" : "8af31abbfb61b6f4573656007e3a138f766f0ecf76099025cbe738c608aad759",
+      "sha512" : "56856328cd6f2417dda6baf09cd11a5601831222d6687a70a8224bcf89e1df529a655f4529f0307d380d45a7e63bc06bda3d04286e0bd9913fe40b97968c2674",
+      "sha3-512" : "d7d85ecbaa5a1f51ab772193367cf36b4d0f003d3f77c0356fa1c1517a51653a6c92c05e9f051307e1cdab42888961ea3652b37a780f355502429f9526b5ba78"
+    }
+  },
+  "data" : [
+    {
+      "name" : "screenshot.png",
+      "size" : 74683,
+      "digests" : {
+        "sha256" : "872775ea3b9ebfdca1f9a5c9b525ee9a80e1c032e1dd7252a70930fd90fe712f",
+        "sha512" : "5cb8fa6cba081248ee4c1426922e3f3477b62104b90469c36febbf077f369b1bf81eee8810b67ed5400947e69d0f06af4c4ed45e27ec3d515715c3a6ee5a0dc2",
+        "sha3-512" : "476f2285074dd728518d22893bc6bfa362d6d481cc7fb250d299221c1efe19571d658d7f7bc99c5a9b076d99d7023b21b8d2339e55862da739bdfb453cd9b418"
+      }
+    }
+  ],
+  "parsed" : {
+    "kind" : "cms",
+    "cms" : {
+      "size" : 181096,
+      "sha256" : "8af31abbfb61b6f4573656007e3a138f766f0ecf76099025cbe738c608aad759",
+      "version" : 1,
+      "signers" : 1
+    }
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-CF31E41F7A48C2D01545352DB24F6776456CFCB3F38FC10D2865A7FA59B07365",
+        "signature_filename" : "screenshot.png.signed_qes_detached.p7s",
+        "format" : "CAdES-C",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.12=#13055469746c65,1.2.840.113549.1.9.1=#1613636572746e5f3230343840534d4330312e6575,L=Brussels,OU=Date of birth : 01/04/1965,O=Organization nv / sa,C=BE,CN=CERTN-Activetestcertifcertipost First-name Second-name Thirdname",
+          "serial" : "1208925819615908381226147",
+          "sha256" : "e07f11472bc72bb04a6e3c012dfc838cd323d130bdb3f0e5b1e9558de1b723d0",
+          "not_before" : "2010-07-15T14:50:56Z",
+          "not_after" : "2015-07-15T14:50:56Z"
+        },
+        "claimed_signing_time" : "2013-08-14T15:45:21Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "name" : "screenshot.png",
+            "alg" : "SHA256",
+            "digest" : "872775ea3b9ebfdca1f9a5c9b525ee9a80e1c032e1dd7252a70930fd90fe712f",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2013-08-14T15:45:31.189Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "ARCHIVE_TIMESTAMP",
+            "archive_type" : "CAdES_V2",
+            "production_time" : "2013-08-14T15:45:33.360Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

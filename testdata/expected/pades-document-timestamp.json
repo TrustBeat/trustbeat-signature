@@ -1,0 +1,117 @@
+{
+  "id" : "pades-document-timestamp",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "timestamped_and_signed.pdf",
+    "size" : 71387,
+    "digests" : {
+      "sha256" : "b2ccfa6916d129faf486cad9ab3c2cb4333882792f950b12b891b7d0edb0b29b",
+      "sha512" : "3e44a4ed66474c5c50e28cc76bcf946cb46cc6ee7c2be6277537b9f732640360fdf953b4361aabc1a51f2b66ffb0a5335fad1719206e4102d0903b5eeb8db2ad",
+      "sha3-512" : "23636f578327e94b9873a9ef73a1a8cd398a862b137656afca66874028d8b4b9f3b2376d7905219540f1d069e46bd024fbd46ef997f15953ebfb30e496282b50"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "DocTimeStamp",
+        "sub_filter" : "ETSI.RFC3161",
+        "byte_range" : [
+          0,
+          12156,
+          31102,
+          772
+        ],
+        "covers_whole_file" : false,
+        "signed_range_sha256" : "fe7eefb04845823c96ec44d8b29022f30a19d7f978cbc65816b90d0873f6d9da",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 2444,
+          "sha256" : "9369feff2191111926287108878ac9073acc54795ee2bbf1fd2e66e7ae11159a",
+          "version" : 3,
+          "signers" : 1,
+          "encapsulated_content" : {
+            "sha256" : "29863589a6636cea8acbb63f3d60bcb1f6a7af307fafd717bfc3ecc20979c763",
+            "sha512" : "057a6c802cd76f72246d4c383af8c49302d406c5273f4828de6db7499309ea2d4237cabe26e02d09a620fce5044245d36fb642780c2851f254afa33833d52141",
+            "sha3-512" : "c37a64b2bc9179d2e64bf6d765a37594989870897b42d175117e51420ef8dd11088ce0bce82c83beb6700a4db1bb3e0f0aaa8c91a1b01bba8de7c83e62bddaf2"
+          }
+        }
+      },
+      {
+        "type" : "Sig",
+        "sub_filter" : "ETSI.CAdES.detached",
+        "byte_range" : [
+          0,
+          32409,
+          70299,
+          1088
+        ],
+        "covers_whole_file" : true,
+        "signed_range_sha256" : "ccce8ce616c4b3a6620fae679292bbcb30eea1c8695434b3ff55db30aff7a135",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 3810,
+          "sha256" : "f63e9cc572caed4949160514f7581e73420928cdc73b8bcfb3d821a649b6232f",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-E9E310399BD6D23DF05725988F8128699766E467BB42277D87A94182D6E11AFC",
+        "signature_filename" : "timestamped_and_signed.pdf",
+        "format" : "PAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130b3837303132373330373338,2.5.4.42=#130d506965727269636b205061636f,2.5.4.4=#130d56616e64656e62726f75636b65,CN=Pierrick Vandenbroucke (Signature),C=BE",
+          "serial" : "21267647932559346000444903846468827673",
+          "sha256" : "4fab29027727e58e4518ed0b6ae554d055f05b3d9197e0d16b20028d227d1a9f",
+          "not_before" : "2017-01-25T22:12:12Z",
+          "not_after" : "2027-01-21T23:59:59Z"
+        },
+        "claimed_signing_time" : "2020-11-25T15:35:44Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "ccce8ce616c4b3a6620fae679292bbcb30eea1c8695434b3ff55db30aff7a135",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          32409,
+          70299,
+          1088
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : [
+      {
+        "type" : "DOCUMENT_TIMESTAMP",
+        "production_time" : "2020-11-25T14:37:21Z",
+        "imprint_found" : true,
+        "imprint_intact" : true,
+        "pdf_byte_range" : [
+          0,
+          12156,
+          31102,
+          772
+        ]
+      }
+    ]
+  }
+}

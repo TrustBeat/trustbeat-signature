@@ -1,0 +1,128 @@
+{
+  "id" : "asice-cades-lta",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "ASiC-E-CAdES-BpLTA.sce",
+    "size" : 14757,
+    "digests" : {
+      "sha256" : "819be425cc8ecff217cafda2dac557a9de87974bee3f57b4c0d418139ee7d06e",
+      "sha512" : "6c3a80009afedfab823f0c98f9f5872b19abfc3509de6110dc7f31d8964f86b055d06edd755e2c658a7a5f3adfce99d81bf2b60296873be1b09da25e0942350c",
+      "sha3-512" : "bcf175d6bc82ccbf50c84ec460460269d7cab22d2ed8f5246e88e8190ada0f6c84421dcb9553e07e7017323737d31c37d3ec42726a4b43d167a689829e17d30f"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "asic",
+    "mimetype" : "application/vnd.etsi.asic-e+zip",
+    "data_objects" : [
+      {
+        "name" : "TEST-DOC.txt",
+        "size" : 20,
+        "digests" : {
+          "sha256" : "8cd972d8f2c7283b4a590b8b4d00286de48c82fd08f6418eaac6482580075e5e",
+          "sha512" : "8f299c47dd022539ff80a1de900c284179adb1a0feb9d7a2fd18056acb8a0ee06430ccc60ba1bc5a7ddd86052fdba80fa51c29b93ed8a3e26b7335cd4b4b11ae",
+          "sha3-512" : "2293af4063eaf6c6c2f1713dfc2852fa96ece515a08d47083cc6d8ccf6b01b4f537d028813e87daeadc1ccadec8024962728b4408ba883f755b2b0ecb9ef2af4"
+        }
+      }
+    ],
+    "meta_inf" : [
+      {
+        "name" : "META-INF/ASiCArchiveManifest.xml",
+        "size" : 1280,
+        "sha256" : "9a4603cc71de2aece2c9ba388ff03ff09e95f591817475262ff31405081ae22a"
+      },
+      {
+        "name" : "META-INF/ASiCManifest.xml",
+        "size" : 564,
+        "sha256" : "2e2659f14c56b8bb2917ceb0ab1a7659d530b424631eeee885cc0d963aeddc8f"
+      },
+      {
+        "name" : "META-INF/signature001.p7s",
+        "size" : 16155,
+        "sha256" : "054367c204d12e113b853921cc0444b661ebe798d0d9fd311803ca91b69b9ca4"
+      },
+      {
+        "name" : "META-INF/timestamp001.tst",
+        "size" : 6957,
+        "sha256" : "73a377d797093995ecc0ff58c9a1d83509af13af9722560f901b9c2e66c5a55e"
+      }
+    ],
+    "xml_signatures" : [],
+    "cms_signatures" : [
+      {
+        "entry" : "META-INF/signature001.p7s",
+        "cms" : {
+          "size" : 16155,
+          "sha256" : "054367c204d12e113b853921cc0444b661ebe798d0d9fd311803ca91b69b9ca4",
+          "version" : 5,
+          "signers" : 1,
+          "encapsulated_content" : {
+            "sha256" : "2e2659f14c56b8bb2917ceb0ab1a7659d530b424631eeee885cc0d963aeddc8f",
+            "sha512" : "20b03d025e4611ffe0587d1b0105bb19d9cf6102d8b519f82a5f4ab2c04f92a94478103fc51af5eb1147ca1f24f2d6e616fadae6119565b1a58587f274d09aa2",
+            "sha3-512" : "fed7e6d1c1ae797cb303d6b25b67317966947080912164ac79dbba7ebca44fe7030144a1f54af1edf7cc47cd6cfa735b8a6f41255fa40b210114b896e01b8a1a"
+          }
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "container_type" : "ASiC-E",
+    "signatures" : [
+      {
+        "id" : "S-AAE9F5B110155022280B9F6285AD81E2F380F4EEA76CEA9456F42A6FF5992045",
+        "signature_filename" : "META-INF/signature001.p7s",
+        "format" : "CAdES-BASELINE-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#1309393939393939393053,2.5.4.4=#0c08464943544943494f,2.5.4.42=#0c09434955444144414e4f,CN=CIUDADANO FICTICIO ACTIVO,2.5.4.46=#130e2d646e6920393939393939393053,OU=Condiciones de uso en www.izenpe.com nola erabili jakiteko,OU=Herritar ziurtagiria - Certificado de ciudadano,OU=Ziurtagiri onartua - Certificado reconocido,C=ES",
+          "serial" : "565074",
+          "sha256" : "518c77691a42b537ad74787fc6232389e95aaa1410ee1905721b971bbbd19fd4",
+          "not_before" : "2017-07-12T13:00:01Z",
+          "not_after" : "2021-07-12T13:00:01Z"
+        },
+        "claimed_signing_time" : "2020-12-20T17:11:41Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA256",
+            "digest" : "2e2659f14c56b8bb2917ceb0ab1a7659d530b424631eeee885cc0d963aeddc8f",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "MANIFEST_ENTRY",
+            "uri" : "TEST-DOC.txt",
+            "name" : "TEST-DOC.txt",
+            "alg" : "SHA256",
+            "digest" : "8cd972d8f2c7283b4a590b8b4d00286de48c82fd08f6418eaac6482580075e5e",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2020-12-20T17:11:42Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          },
+          {
+            "type" : "CONTAINER_TIMESTAMP",
+            "archive_type" : "CAdES_DETACHED",
+            "production_time" : "2020-12-20T17:11:43Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

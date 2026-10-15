@@ -1,0 +1,87 @@
+{
+  "id" : "pades-one-signature",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-P-BG_BOR-1.pdf",
+    "size" : 44927,
+    "digests" : {
+      "sha256" : "4076a53bdfd03330d171ae34031ee7d7d07381ec36801adb9c42803281f987ef",
+      "sha512" : "59c2440707f0852a89687e495ac275f40378c5fa8f20db027de082413ae2320984e2e5c7392d993cab08b2d5be49f3a3f39a02cdda7a629a5fb07d80cd1697d4",
+      "sha3-512" : "42004a57222fd64e4fd8480c55bac304f2a0131c1174c25311a46b5c2dfcebfca40a7b9310c0345d7718abc74c0b756c4d5e7db39a0d01fc6e63f5027de67098"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "pdf",
+    "pdf_signatures" : [
+      {
+        "type" : "Sig",
+        "sub_filter" : "adbe.pkcs7.detached",
+        "byte_range" : [
+          0,
+          7858,
+          41012,
+          3915
+        ],
+        "covers_whole_file" : true,
+        "signed_range_sha256" : "b0eefa0589a801abc32ad023bc08d720630850bc3629fe5bc18c782dcd2cb51c",
+        "cms" : {
+          "encoding" : "der",
+          "size" : 11941,
+          "sha256" : "b912c5903b130407855a12e7aebbfb1530302ce7685eb676747c21b46eba0749",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-B21FD224F5AC7B1B32715E6A1FF12DEEDE7B8B995287D1BB94E5913EA8F60D06",
+        "signature_filename" : "Signature-P-BG_BOR-1.pdf",
+        "format" : "PKCS7-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.20=#130739323135333733,1.2.840.113549.1.9.1=#1610766c6976616e6f7640626f62732e6267,2.5.4.17=#130431373834,STREET=bul Tsarigradsko shose 117\\,Sofia,2.5.4.12=#1331537065747369616c697374207072696c6f7a686e6f2070726f6772616d6972616e653a547275646f7620646f676f766f72,CN=Valentin Tsvetanov Ivanov,OU=BULSTAT:201230426,OU=SR:EIK 201230426,OU=Professional Certificate - UES,O=BORICA - BANKSERVICE AD,L=Sofia,ST=bul. Tsar Boris 3 41\\,Sofia\\,PK:1612\\,EGN:8205301708,C=BG",
+          "serial" : "10027144",
+          "sha256" : "7ff0bc3a6a43518578f4e53d8cd69c852f79e418afe54af8fd8447979f752a1b",
+          "not_before" : "2014-07-11T00:00:00Z",
+          "not_after" : "2015-07-11T00:00:00Z"
+        },
+        "claimed_signing_time" : "2014-11-07T12:18:47Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA512",
+            "digest" : "8461721398b0d144024be22fbbbe64ebeba9a59c1a27dfa95cc0f9f0af9560c99b63acfdcb06ebe7336c41fa91bc4c62d15ff04007bd8592efb939440923dcc7",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "pdf_byte_range" : [
+          0,
+          7858,
+          41012,
+          3915
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2014-11-07T12:18:49Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

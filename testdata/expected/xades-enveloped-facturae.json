@@ -1,0 +1,109 @@
+{
+  "id" : "xades-enveloped-facturae",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "factura_ejemplo2_32v1.xml",
+    "size" : 13083,
+    "digests" : {
+      "sha256" : "a2eb582eb4501d0cab6257dc39dfcff3e697dc8c49abcb3417acb9edf7b15497",
+      "sha512" : "f29fdc5a0b79881213d29eb550c8a5ec86ff4293ee6b8f757c6345c333d2a2800d5a62ddde9bc7e7248b4893deca7972226910e203573da8e8f5b6c8416c6304",
+      "sha3-512" : "8e1ccc3755934b778d683c2ef41934ca45ddd85076a89d2389ceb9d85c34dc730639b5b313fe962d8d7785ec7114b0a4d6dc000d803cf2d2dc890a0b2b6b147d"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature966845",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+        "signed_info_c14n_sha256" : "f11e64d2b7c436a1e851a60e683c8f8cdbc2aa149aac0a2ada242b9d913aa0f1",
+        "inherited_namespaces" : [
+          "xmlns:ds",
+          "xmlns:fe"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#Signature966845-SignedProperties617941",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "47baf652df951536736c1ac67e097269dca8d1bd"
+          },
+          {
+            "uri" : "#Certificate1533726",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "328c789687dd77fcea3913492abce65e7a8c6e2d"
+          },
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+            ],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "93e81e8e51f30839bf97829de874a9a2836da7c5"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-89B91C597D2CEBCD9FC4A87EBE5D75C65B073E83BBEFBBE326DA3221179793C7",
+        "signature_filename" : "factura_ejemplo2_32v1.xml",
+        "format" : "XAdES-EPES",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=Usuario 54,OU=MITyC DNIe Pruebas,O=MITyC,L=Madrid,ST=Madrid,C=ES",
+          "serial" : "135",
+          "sha256" : "d3725a50758fa67ff8a6e5d13df72176e30d73869d9f3cc65615ae549d5eaf3a",
+          "not_before" : "2009-10-15T16:09:34Z",
+          "not_after" : "2010-10-15T16:09:34Z"
+        },
+        "claimed_signing_time" : "2010-03-10T11:46:58Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#Signature966845-SignedProperties617941",
+            "alg" : "SHA1",
+            "digest" : "47baf652df951536736c1ac67e097269dca8d1bd",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#Certificate1533726",
+            "alg" : "SHA1",
+            "digest" : "328c789687dd77fcea3913492abce65e7a8c6e2d",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA1",
+            "digest" : "93e81e8e51f30839bf97829de874a9a2836da7c5",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

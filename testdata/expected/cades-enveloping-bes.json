@@ -1,0 +1,64 @@
+{
+  "id" : "cades-enveloping-bes",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "cades-bes-signeddata-enveloping.p7m",
+    "size" : 2867,
+    "digests" : {
+      "sha256" : "aeb14ca44d641c203d69c1f4a2b7d008eef885d03cc6b5a5f8cea872298a5d9a",
+      "sha512" : "d3f65f04e9d4d9e42bb3b5202831d3b162f9720bdc55d0ae437c14723769eaa9bc2122dca382498e55a39904d90acb419556ddc44fe7b20b8db037c90b4cfbc0",
+      "sha3-512" : "5100514ba929774285e8501c495777fa9f2ef56469d80c53501b2b9d3421e8bae0ba8e6dbacef59a5906fe8e308c3c21fbbf9eea581feb65dfb55755627e8980"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "cms",
+    "cms" : {
+      "size" : 2867,
+      "sha256" : "aeb14ca44d641c203d69c1f4a2b7d008eef885d03cc6b5a5f8cea872298a5d9a",
+      "version" : 3,
+      "signers" : 1,
+      "encapsulated_content" : {
+        "sha256" : "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+        "sha512" : "2c74fd17edafd80e8447b0d46741ee243b7eb74dd2149a0ab1b9246fb30382f27e853d8585719e0e67cbda0daa8f51671064615d645ae27acb15bfb1447f459b",
+        "sha3-512" : "3d58a719c6866b0214f96b0a67b37e51a91e233ce0be126a08f35fdf4c043c6126f40139bfbc338d44eb2a03de9f7bb8eff0ac260b3629811e389a5fbee8a894"
+      }
+    }
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-17F64B8500332A34D27DD1FF4B922541BCFD2D3ED1F998AE48AE78D55F747566",
+        "signature_filename" : "cades-bes-signeddata-enveloping.p7m",
+        "format" : "CAdES-BES",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=LU,OU=PKI-TEST,O=Nowina Solutions,CN=good-user",
+          "serial" : "10",
+          "sha256" : "66518276ccc489e3c4039e705363182edba3d44248f9dc152c7a1327e12533ec",
+          "not_before" : "2023-12-07T11:31:21Z",
+          "not_after" : "2025-10-07T10:31:21Z"
+        },
+        "claimed_signing_time" : "2024-11-07T11:31:14Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "alg" : "SHA512",
+            "digest" : "2c74fd17edafd80e8447b0d46741ee243b7eb74dd2149a0ab1b9246fb30382f27e853d8585719e0e67cbda0daa8f51671064615d645ae27acb15bfb1447f459b",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

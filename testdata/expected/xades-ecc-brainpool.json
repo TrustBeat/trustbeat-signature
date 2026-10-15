@@ -1,0 +1,96 @@
+{
+  "id" : "xades-ecc-brainpool",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "xades-ecc-brainpool.xml",
+    "size" : 381352,
+    "digests" : {
+      "sha256" : "c3da30e4252d47b27a04b333defb1be70db27e9babeb8be136c945c4afd12674",
+      "sha512" : "ba6ad294317c38d1761dbb5f6790cfd848e8f80730e8f642a2e3231f5bf27362beaf7132e24414e356e68378c4805d25aa48c2285a21a3ac5f3bd0a51f0d3f46",
+      "sha3-512" : "25883bce304eb8abec7775c010e1c7023532cb5a20406c4323a5dbc3244e5a0477f733e99e2f99dfd4d9658b7bc97365875dfea69d4279d8271f5a5cfca35adf"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature-1635375603376",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256",
+        "signed_info_c14n_sha256" : "bdb6e44d58083447fd8f6dfe2016a08abed33d2e57c45e858b2029e9bb1b944a",
+        "inherited_namespaces" : [
+          "xmlns"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature",
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "dffb9e1a98234bb3f9b4405c1bbaad2446839d860cf352a62994a448c9101911"
+          },
+          {
+            "uri" : "#SignedProperties-1635375603376",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "de006b3deee5f5062a3ffb5eef008c6c41a91004143959009cc03c9e934f6db6"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-C66D89CE43B774FD07881488CFDE1CE3C60FB40F3E366505AC70380F3EC913A1",
+        "signature_filename" : "xades-ecc-brainpool.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "CN=TSL Signing Unit 4,O=gematik GmbH,C=DE",
+          "serial" : "2",
+          "sha256" : "4c702ee64dae89e2529d40b3c43d6ed2290f3dab1234c5198ba61ab5cc30a211",
+          "not_before" : "2020-05-27T08:08:45Z",
+          "not_after" : "2025-05-26T08:08:44Z"
+        },
+        "claimed_signing_time" : "2021-10-27T23:00:03Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "dffb9e1a98234bb3f9b4405c1bbaad2446839d860cf352a62994a448c9101911",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties-1635375603376",
+            "alg" : "SHA256",
+            "digest" : "de006b3deee5f5062a3ffb5eef008c6c41a91004143959009cc03c9e934f6db6",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id" : "xades-baseline-b",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "XAdESBWithoutSignedDataObjectProperties.xml",
+    "size" : 13672,
+    "digests" : {
+      "sha256" : "2c2e30a0a590d24c6c8d479821a19cac520d9d3540ad8ce24be8727eeca72123",
+      "sha512" : "858f2d8437b9737c324e28b61b651283b9c93b96d2473b162deb3f2e6fae7ba5b278db465ad699327d267f993f67f55c212af566e94a31b6920f13eb5cc3bd09",
+      "sha3-512" : "8998c6a3cde3383d4a688517aafd2a029416d7481430f0a146380862cfa77a04332ef245017e76bd81cead93b242c3d1f1eaf29441e72258181fe2ad84297b4d"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "Signature",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+        "signed_info_c14n_sha256" : "7930a040b3478bcd943067d1579a5d79f31a5d184159c804c369e76d49cc532c",
+        "inherited_namespaces" : [
+          "xmlns:nn",
+          "xmlns:xsi"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#SignedProperties",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "12c435fb6ab9bb058c9be5964558932d0e1be196"
+          },
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+            ],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "b929a94dd38a29b13d5444e2d9a5cf863052ce23"
+          },
+          {
+            "uri" : "#Certificado1",
+            "type" : "",
+            "transforms" : [],
+            "alg" : "http://www.w3.org/2000/09/xmldsig#sha1",
+            "digest" : "d73522a6531ee45abb385da3b59fdb05284dfdd2"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-7B523B7556EB9CBA9F928927EBC11F9E0AFCFB0458BBB3B71F24D59497B71B66",
+        "signature_filename" : "XAdESBWithoutSignedDataObjectProperties.xml",
+        "format" : "XAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.13=#0c265175616c69666965642043657274696669636174653a2043414d2d5046462d53572d4b505343,2.5.4.12=#0c35524553504f4e5341424c452044454c20534552564943494f20444520464143545552414349c3934e20454c45435452c3934e494341,OU=SERVICIOS BANCARIOS  FIRMA ELECTRÓNICA DE FACTURAS,OU=FACTURACION ELECTRONICA,O=CAIXABANK S.A.,1.3.6.1.4.1.17326.30.3=#0c09413038363633363139,2.5.4.42=#0c064c6c75c3ad73,2.5.4.4=#0c1153616772697374c3a02053656c6cc3a973,2.5.4.5=#1309373736313438313441,1.2.840.113549.1.9.1=#1614636667657374696f6e406c6163616978612e6573,CN=Lluís Sagristà Sellés,C=ES",
+          "serial" : "18441715652553477198",
+          "sha256" : "88bae14a90fe3c0dfc6a0aa221b75496bf5f7d7f1e4888d035802c18616cce94",
+          "not_before" : "2014-03-25T17:32:04Z",
+          "not_after" : "2016-03-24T17:32:04Z"
+        },
+        "claimed_signing_time" : "2014-11-03T10:00:11Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties",
+            "alg" : "SHA1",
+            "digest" : "12c435fb6ab9bb058c9be5964558932d0e1be196",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA1",
+            "digest" : "b929a94dd38a29b13d5444e2d9a5cf863052ce23",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#Certificado1",
+            "alg" : "SHA1",
+            "digest" : "d73522a6531ee45abb385da3b59fdb05284dfdd2",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : []
+      }
+    ],
+    "timestamps" : []
+  }
+}

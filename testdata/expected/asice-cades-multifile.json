@@ -1,0 +1,125 @@
+{
+  "id" : "asice-cades-multifile",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "multifiles-ok.asice",
+    "size" : 4758,
+    "digests" : {
+      "sha256" : "8fbe485e272daae067285df1eba72a165b6ced13e390a04ab15d7d7c180571bd",
+      "sha512" : "bb3242254c8434ee533b4132099faafc4da1562cb29f0ad4f10259aa69d419216c2a4e058462eb026b782e102cb47e6306e0cf120cf44b4cc4d09e744c089e98",
+      "sha3-512" : "5a3d7abb22847495146eb4be5644a29e5f0cc29c810db9312a63d894358f147a0b0735f160188afb9d7396342b505880a096fc93d116d5cef6624b44f611f40d"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "asic",
+    "mimetype" : "application/vnd.etsi.asic-e+zip",
+    "data_objects" : [
+      {
+        "name" : "test.text",
+        "size" : 13,
+        "digests" : {
+          "sha256" : "07f2bdef34ed16e3a1ba0dbb7e47b8fd981ce0ccb3e1bfe564d82c423cba7e47",
+          "sha512" : "feab0028f1142d420a1425d1dd5b518225b4523aa1cff63385ece3411318819f5ec83042ccb79d81f20e4a243866886ca3ae3026153acff8e126c0e89631502e",
+          "sha3-512" : "2beaad510de3f69fe59bf0515a67398e7c82bc37f04590a1c30a710596b5531ad7b7b6d4cdd9c5a5636e0cd1d4452c182fc1f0173b5906ce5d3fb6754283a01f"
+        }
+      },
+      {
+        "name" : "test2.text",
+        "size" : 11,
+        "digests" : {
+          "sha256" : "7d0c91c735ee8cfb7954278b13f4c095cb5eb34426f6a7ebb0ff64b10499e456",
+          "sha512" : "9043cabaeb9743417fe88f7e2dc03b365e81c5ad46b3596e5901e2ecd5948d1953f6b0a53fd7ab2145e5c53e8f4afa34ea3269c1f8db0447c881a7e0bd102da2",
+          "sha3-512" : "7d441b55886e526ec43fb4ab55fbd1ecf42f4f10796719d2042df7ef74ae04cfe022b16890850c071960f4e4af48b26ed58244bb5ae6d0e6c27e3ae448da4320"
+        }
+      }
+    ],
+    "meta_inf" : [
+      {
+        "name" : "META-INF/ASiCManifest.xml",
+        "size" : 862,
+        "sha256" : "e2867fa299c6121dd75115f44b3bad5ca6b36b2a902ab2beed924b5bc3a83481"
+      },
+      {
+        "name" : "META-INF/signature001.p7s",
+        "size" : 5417,
+        "sha256" : "d79fe351d7054ae141e31e7868680c90b010c7c3b8cfe92cb685e5d49fcdae48"
+      }
+    ],
+    "xml_signatures" : [],
+    "cms_signatures" : [
+      {
+        "entry" : "META-INF/signature001.p7s",
+        "cms" : {
+          "size" : 5417,
+          "sha256" : "d79fe351d7054ae141e31e7868680c90b010c7c3b8cfe92cb685e5d49fcdae48",
+          "version" : 1,
+          "signers" : 1
+        }
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "container_type" : "ASiC-E",
+    "signatures" : [
+      {
+        "id" : "S-D0A355525721B0FD31F0A8BC58BD174DF77FAF8C958821ED8EE8A91C6213F2CD",
+        "signature_filename" : "META-INF/signature001.p7s",
+        "format" : "CAdES-BASELINE-B",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "C=LU,OU=PKI-TEST,O=Nowina Solutions,CN=good-user",
+          "serial" : "10",
+          "sha256" : "b9b8051a58645938f660ec1261b7534e2dc7422882d873b2876204bba1078352",
+          "not_before" : "2018-05-05T08:20:36Z",
+          "not_after" : "2020-03-05T09:20:36Z"
+        },
+        "claimed_signing_time" : "2019-07-30T06:39:07Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MESSAGE_DIGEST",
+            "name" : "META-INF/ASiCManifest.xml",
+            "alg" : "SHA256",
+            "digest" : "e2867fa299c6121dd75115f44b3bad5ca6b36b2a902ab2beed924b5bc3a83481",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "MANIFEST_ENTRY",
+            "uri" : "test.text",
+            "name" : "test.text",
+            "alg" : "SHA256",
+            "digest" : "07f2bdef34ed16e3a1ba0dbb7e47b8fd981ce0ccb3e1bfe564d82c423cba7e47",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "MANIFEST_ENTRY",
+            "uri" : "test2.text",
+            "name" : "test2.text",
+            "alg" : "SHA256",
+            "digest" : "7d0c91c735ee8cfb7954278b13f4c095cb5eb34426f6a7ebb0ff64b10499e456",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "CONTENT_TIMESTAMP",
+            "production_time" : "2019-07-30T06:39:07Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

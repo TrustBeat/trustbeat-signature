@@ -1,0 +1,103 @@
+{
+  "id" : "xades-enveloped-xpath-filter2",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-BE_ECON-3.xml",
+    "size" : 33704,
+    "digests" : {
+      "sha256" : "d631e39b453dfaa0b1dda31a5b3cc46c18aff79e1bc671ab59ef1577a00b6558",
+      "sha512" : "a6d615f0d025a9a7850b584114c122d3621ee03a0df0b4b39cf8cba3a353e4312ca2e6d706af8e75033742bb7400b48ef448e35e103637b7c640817f37e65a58",
+      "sha3-512" : "55b6ef963240868cdd1149e230d5f7204835eff3ed699fbe32e27026896ae9932b4a598e576c97ef4b8f999a2d7743c9ac350a899e8d1b07db866e98b7fa44b1"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "xmldsig-d7ae5038-53c9-4c93-81cf-fad1a44e5ea9",
+        "placement" : "embedded",
+        "canonicalization" : "http://www.w3.org/2001/10/xml-exc-c14n#",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "eec4e89b3f99b6b0b8241f5824f646dda5b3c36e2b7e8421ecd9bb85b5f68ea7",
+        "inherited_namespaces" : [
+          "xmlns"
+        ],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "",
+            "type" : "",
+            "transforms" : [
+              "http://www.w3.org/2002/06/xmldsig-filter2",
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "a35847da03b08c7bb190418e526c7d7fbd5abb73262fde167a0a0cca5c827ab1"
+          },
+          {
+            "uri" : "#xmldsig-d7ae5038-53c9-4c93-81cf-fad1a44e5ea9-xades",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2001/10/xml-exc-c14n#"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha256",
+            "digest" : "8347c5afbb926fcb0c38e89133172bb881190e2d2567d885364756f4bd88cd1a"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-639D3D318419109713B79B7CA3E3348B8F5FAC0FC6F6F696B6304EB0D3ADE3B2",
+        "signature_filename" : "Signature-X-BE_ECON-3.xml",
+        "format" : "XAdES-BASELINE-LT",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130b3739313032353230393931,2.5.4.42=#130b4672616e6b2048656e7269,2.5.4.4=#1308436f726e656c6973,CN=Frank Cornelis (Signature),C=BE",
+          "serial" : "21267647932559663574161737873445718206",
+          "sha256" : "75f5216c135ca7d30473723247e8ad6104f843a598acebf82764f556e378d62d",
+          "not_before" : "2014-04-08T22:47:22Z",
+          "not_after" : "2024-04-07T23:59:59Z"
+        },
+        "claimed_signing_time" : "2014-11-12T07:03:11Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "REFERENCE",
+            "uri" : "",
+            "alg" : "SHA256",
+            "digest" : "a35847da03b08c7bb190418e526c7d7fbd5abb73262fde167a0a0cca5c827ab1",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#xmldsig-d7ae5038-53c9-4c93-81cf-fad1a44e5ea9-xades",
+            "alg" : "SHA256",
+            "digest" : "8347c5afbb926fcb0c38e89133172bb881190e2d2567d885364756f4bd88cd1a",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2014-11-12T07:03:15Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

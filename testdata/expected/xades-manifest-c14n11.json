@@ -1,0 +1,134 @@
+{
+  "id" : "xades-manifest-c14n11",
+  "extractor" : "accept",
+  "file" : {
+    "name" : "Signature-X-CZ_SEF-4.xml",
+    "size" : 16108,
+    "digests" : {
+      "sha256" : "cfc5beef977f3ef2ace49dd4256e88992999f9738e93e7c4a865454002edecd7",
+      "sha512" : "77d1e34a6d239918c828e20cbaf530006513e277e5165ba23c40220e4bd31e5a8aea6252d9ea614f65ab35e37021461dafcc39376f78cb27307c9d98f277c210",
+      "sha3-512" : "4bcf2c13a9612c3140c9cc8a3b93f998f400125759223a03123ed39bf742eaaf464c120680226aad5a6b41ef77e0352f00ab185175f2a141b25141ed731c574f"
+    }
+  },
+  "data" : [],
+  "parsed" : {
+    "kind" : "xml",
+    "xml_signatures" : [
+      {
+        "id" : "AIP44-Signature",
+        "placement" : "document-element",
+        "canonicalization" : "http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+        "signature_method" : "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+        "signed_info_c14n_sha256" : "75f1bb9b06af17e074bbd172729c69421f394640e37b6b3c8045274d10891208",
+        "inherited_namespaces" : [],
+        "inherited_xml_attributes" : [],
+        "references" : [
+          {
+            "uri" : "#SignedObjectsManifest",
+            "type" : "http://www.w3.org/2000/09/xmldsig#Manifest",
+            "transforms" : [
+              "http://www.w3.org/2006/12/xml-c14n11"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha512",
+            "digest" : "aa85d44dc1e3be97a4c9110401f467a2e4fd4710aceb5b2ab83ee503141abe67b8946a1fdf12e55b5bcc93753c1b963d3a8f89adb14902baae4a7c246d89d162"
+          },
+          {
+            "uri" : "#SignatureProperties",
+            "type" : "http://www.w3.org/2000/09/xmldsig#SignatureProperties",
+            "transforms" : [
+              "http://www.w3.org/2006/12/xml-c14n11"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha512",
+            "digest" : "ba5c901cbfc3876d57348a441eb28709e9d9418deaecc4bc8405ccb8b94576c6950cc24cbcea7f7c4a3a30b8d6e5a24aec58c1c5eb18ad8a5f3bd387be56d860"
+          },
+          {
+            "uri" : "#SignedProperties",
+            "type" : "http://uri.etsi.org/01903#SignedProperties",
+            "transforms" : [
+              "http://www.w3.org/2006/12/xml-c14n11"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha512",
+            "digest" : "92b432aee7522d0842cb93b45765227b6b3669f9115151276e48e665841e18de2951d53ed4c0f61ac7107395b9bee329526173e889aae949228f5a2384274f7b"
+          },
+          {
+            "uri" : "#KeyInfo",
+            "type" : "http://www.w3.org/2000/09/xmldsig#Object",
+            "transforms" : [
+              "http://www.w3.org/2006/12/xml-c14n11"
+            ],
+            "alg" : "http://www.w3.org/2001/04/xmlenc#sha512",
+            "digest" : "0731b2499eb6bbcb6066655b35c472edd940d2c3a09c37888ae5deb8f38f40ec7c0009ac035e75c2122cb3a8e78388e53929be27f9e03fb2b1f29519b7b3ade9"
+          }
+        ]
+      }
+    ]
+  },
+  "dss" : {
+    "version" : "6.2",
+    "validation_time" : "2026-10-12T00:00:00Z",
+    "recognised" : true,
+    "signatures" : [
+      {
+        "id" : "S-E190103F8BBF6BD49BB355F6966B617BFD650A70AEB941B5D8CCFB12CCC494FE",
+        "signature_filename" : "Signature-X-CZ_SEF-4.xml",
+        "format" : "XAdES-BASELINE-T",
+        "counter_signature" : false,
+        "signing_certificate" : {
+          "subject" : "2.5.4.5=#130e494341202d203130333234353634,O=Kooperativa pojišťovna\\, a.s.\\, Vienna Insurance Group,CN=OB-A KOOP\\+ČPP\\, AdES signing certificate,C=CZ",
+          "serial" : "10955245",
+          "sha256" : "851cfaaddb550802e7b8f30d790e91bb2d9301e225ffdf80eb1804fefbd659a8",
+          "not_before" : "2014-09-11T12:49:29Z",
+          "not_after" : "2015-09-11T12:49:29Z"
+        },
+        "claimed_signing_time" : "2014-10-30T10:40:35Z",
+        "signature_intact" : true,
+        "signature_valid" : true,
+        "indication" : "INDETERMINATE",
+        "sub_indication" : "NO_CERTIFICATE_CHAIN_FOUND",
+        "digest_matchers" : [
+          {
+            "type" : "MANIFEST",
+            "uri" : "#SignedObjectsManifest",
+            "alg" : "SHA512",
+            "digest" : "aa85d44dc1e3be97a4c9110401f467a2e4fd4710aceb5b2ab83ee503141abe67b8946a1fdf12e55b5bcc93753c1b963d3a8f89adb14902baae4a7c246d89d162",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNATURE_PROPERTIES",
+            "uri" : "#SignatureProperties",
+            "alg" : "SHA512",
+            "digest" : "ba5c901cbfc3876d57348a441eb28709e9d9418deaecc4bc8405ccb8b94576c6950cc24cbcea7f7c4a3a30b8d6e5a24aec58c1c5eb18ad8a5f3bd387be56d860",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "SIGNED_PROPERTIES",
+            "uri" : "#SignedProperties",
+            "alg" : "SHA512",
+            "digest" : "92b432aee7522d0842cb93b45765227b6b3669f9115151276e48e665841e18de2951d53ed4c0f61ac7107395b9bee329526173e889aae949228f5a2384274f7b",
+            "found" : true,
+            "intact" : true
+          },
+          {
+            "type" : "KEY_INFO",
+            "uri" : "#KeyInfo",
+            "alg" : "SHA512",
+            "digest" : "0731b2499eb6bbcb6066655b35c472edd940d2c3a09c37888ae5deb8f38f40ec7c0009ac035e75c2122cb3a8e78388e53929be27f9e03fb2b1f29519b7b3ade9",
+            "found" : true,
+            "intact" : true
+          }
+        ],
+        "timestamps" : [
+          {
+            "type" : "SIGNATURE_TIMESTAMP",
+            "production_time" : "2014-10-30T10:40:37.012Z",
+            "imprint_found" : true,
+            "imprint_intact" : true
+          }
+        ]
+      }
+    ],
+    "timestamps" : []
+  }
+}

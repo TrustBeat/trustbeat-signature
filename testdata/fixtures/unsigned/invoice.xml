@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invoice xmlns="urn:example:invoice">
+  <number>2026-0001</number>
+  <total currency="EUR">100.00</total>
+</invoice>
