@@ -65,7 +65,8 @@ for target in $targets; do
   # Fixed timestamps and order, so an archive is a function of its inputs.
   touch -d "@0" "dist/${stem}" "dist/${stem}"/*
   if [[ "$os" == windows ]]; then
-    (cd dist && zip -qX -r "${stem}.zip" "${stem}")
+    # Sorted entries and UTC: zip stores local time and adds files in directory-listing order.
+    (cd dist && find "${stem}" | LC_ALL=C sort | TZ=UTC zip -qX -@ "${stem}.zip")
   else
     tar -C dist --sort=name --owner=0 --group=0 --numeric-owner --mtime=@0 -cf - "${stem}" | gzip -n >"dist/${stem}.tar.gz"
   fi
