@@ -35,7 +35,8 @@ docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/work" \
 
 Homebrew and Scoop install the release archives below and check their SHA-256. The container image
 (linux/amd64 + arm64, distroless, ~3.5 MB) packs the same release binaries; it runs as a non-root
-user, so pass `--user` as above when it writes into the mounted directory. Its signature:
+user, so pass `--user` as above when it writes into the mounted directory. Its signature (needs
+cosign v3 or later — v2 does not read the Sigstore bundle format and reports "no signatures found"):
 
 ```bash
 cosign verify ghcr.io/trustbeat/trustbeat-signature:0.1.1 \
