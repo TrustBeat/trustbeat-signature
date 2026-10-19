@@ -1,0 +1,114 @@
+# Publishes the container image ghcr.io/trustbeat/trustbeat-signature for a release: linux/amd64 +
+# linux/arm64, tagged X.Y.Z and latest, signed keyless with cosign.
+#
+# Called by release.yml after the release is created; run it by hand (workflow_dispatch) to
+# publish an image for a release that predates this workflow. It builds nothing from source: it
+# downloads the release's Linux archives, checks them against SHA256SUMS and the cosign signature
+# of SHA256SUMS, and packs those binaries (see Dockerfile).
+#
+# Customers check the image with
+#   cosign verify ghcr.io/trustbeat/trustbeat-signature:X.Y.Z \
+#     --certificate-identity-regexp '^https://github.com/TrustBeat/trustbeat-signature/\.github/workflows/docker\.yml@' \
+#     --certificate-oidc-issuer https://token.actions.githubusercontent.com
+name: Docker
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        type: string
+        required: true
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag (vX.Y.Z)
+        type: string
+        required: true
+
+permissions: {}
+
+concurrency:
+  group: docker-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  image:
+    name: Build, push and sign
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # download release assets
+      packages: write  # push to ghcr.io
+      id-token: write  # keyless cosign signature of the image
+    env:
+      TAG: ${{ inputs.tag }}
+      IMAGE: ghcr.io/trustbeat/trustbeat-signature
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
+        # The workflow's own ref: the release tag when release.yml calls it, the dispatching
+        # branch on a backfill (a tag older than this workflow has no Dockerfile).
+        with:
+          persist-credentials: false
+
+      - name: Check the tag is a version
+        run: |
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::tag $TAG is not vX.Y.Z"; exit 1; }
+
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6  # v4.1.2
+
+      - name: Download and check the release binaries
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          version="${TAG#v}"
+          mkdir -p ctx && cd ctx
+          gh release download "$TAG" -p SHA256SUMS -p SHA256SUMS.sigstore.json -p "*-linux-*.tar.gz"
+          cosign verify-blob SHA256SUMS --bundle SHA256SUMS.sigstore.json \
+            --certificate-identity "https://github.com/${GITHUB_REPOSITORY}/.github/workflows/release.yml@refs/tags/${TAG}" \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com
+          for arch in amd64 arm64; do
+            stem="trustbeat-signature-${version}-linux-${arch}"
+            grep -q "  ${stem}.tar.gz\$" SHA256SUMS || { echo "::error::${stem}.tar.gz not in SHA256SUMS"; exit 1; }
+          done
+          sha256sum --check --strict --ignore-missing SHA256SUMS
+          for arch in amd64 arm64; do
+            stem="trustbeat-signature-${version}-linux-${arch}"
+            tar -xzf "${stem}.tar.gz" && mv "$stem" "linux-${arch}"
+          done
+          cp ../Dockerfile .
+
+      - name: Log in to ghcr.io
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "$GH_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+
+      - name: Build and push
+        run: |
+          version="${TAG#v}"
+          docker buildx create --use --name multi >/dev/null
+          # No RUN steps, so no emulation is needed. Fixed timestamps and no provenance attestation:
+          # the image is a function of the Dockerfile and the release binaries.
+          SOURCE_DATE_EPOCH=0 docker buildx build ctx \
+            --platform linux/amd64,linux/arm64 \
+            --build-arg "VERSION=${version}" \
+            --provenance=false \
+            --tag "${IMAGE}:${version}" --tag "${IMAGE}:latest" \
+            --output type=image,push=true,rewrite-timestamp=true \
+            --metadata-file metadata.json
+          digest="$(jq -r '."containerimage.digest"' metadata.json)"
+          [[ "$digest" == sha256:* ]] || { echo "::error::no image digest"; cat metadata.json; exit 1; }
+          echo "DIGEST=$digest" >>"$GITHUB_ENV"
+          echo "### ${IMAGE}:${version}" >>"$GITHUB_STEP_SUMMARY"
+          echo "\`${digest}\`" >>"$GITHUB_STEP_SUMMARY"
+
+      - name: Sign the image
+        run: |
+          cosign sign --yes "${IMAGE}@${DIGEST}"
+          cosign verify "${IMAGE}@${DIGEST}" \
+            --certificate-identity-regexp "^https://github.com/${GITHUB_REPOSITORY}/\.github/workflows/docker\.yml@" \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com >/dev/null
+
+      - name: Smoke test
+        run: |
+          docker run --rm --pull always "${IMAGE}@${DIGEST}" version | tee out.txt
+          grep -qx "trustbeat-signature ${TAG#v}" out.txt

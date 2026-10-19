@@ -19,7 +19,31 @@ check exactly what is sent.
 
 ## Install
 
-Download the archive for your OS from [Releases](https://github.com/TrustBeat/trustbeat-signature/releases)
+```bash
+brew install trustbeat/tap/trustbeat-signature           # macOS, Linux
+```
+
+```powershell
+scoop bucket add trustbeat https://github.com/TrustBeat/scoop-bucket   # Windows
+scoop install trustbeat-signature
+```
+
+```bash
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/work" \
+  ghcr.io/trustbeat/trustbeat-signature extract contract.pdf --out sub.json
+```
+
+Homebrew and Scoop install the release archives below and check their SHA-256. The container image
+(linux/amd64 + arm64, distroless, ~3.5 MB) packs the same release binaries; it runs as a non-root
+user, so pass `--user` as above when it writes into the mounted directory. Its signature:
+
+```bash
+cosign verify ghcr.io/trustbeat/trustbeat-signature:0.1.1 \
+  --certificate-identity-regexp '^https://github.com/TrustBeat/trustbeat-signature/\.github/workflows/docker\.yml@' \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com
+```
+
+Or download the archive for your OS from [Releases](https://github.com/TrustBeat/trustbeat-signature/releases)
 (Linux, macOS and Windows; amd64 and arm64) and put `trustbeat-signature` on your `PATH`. Or build it
 yourself: `GOTOOLCHAIN=local CGO_ENABLED=0 go build -trimpath .` (Go version pinned in `go.mod`).
 

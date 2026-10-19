@@ -114,3 +114,15 @@ jobs:
           api-key: ${{ secrets.TRUSTBEAT_API_KEY }}
           files: dist/*
           description: "trustbeat-signature ${{ github.ref_name }}"
+
+  # ghcr.io/trustbeat/trustbeat-signature, packed from the archives just released.
+  docker:
+    name: Container image
+    needs: release
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    uses: ./.github/workflows/docker.yml
+    with:
+      tag: ${{ github.ref_name }}
