@@ -65,11 +65,11 @@ Binaries are built by CI from the tagged source only, never on a workstation. Ea
 `LICENSE` and `THIRD_PARTY_LICENSES.txt` (the licences of every Go module linked into the binary).
 
 The build is reproducible: rebuild a release from its tag and compare with the published checksums
-(needs Go 1.23.4, the version pinned in `go.mod`, and `git`, `tar`, `gzip`, `zip`):
+(needs Go 1.27.3, the version pinned in `go.mod`, and `git`, `tar`, `gzip`, `zip`):
 
 ```bash
-git clone --branch v0.1.1 https://github.com/TrustBeat/trustbeat-signature.git && cd trustbeat-signature
-./build.sh v0.1.1 && diff dist/SHA256SUMS <(curl -sL https://github.com/TrustBeat/trustbeat-signature/releases/download/v0.1.1/SHA256SUMS)
+git clone --branch v0.1.2 https://github.com/TrustBeat/trustbeat-signature.git && cd trustbeat-signature
+./build.sh v0.1.2 && diff dist/SHA256SUMS <(curl -sL https://github.com/TrustBeat/trustbeat-signature/releases/download/v0.1.2/SHA256SUMS)
 ```
 
 Build from a git clone: the binary records the commit it was built from.
