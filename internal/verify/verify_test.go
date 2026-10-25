@@ -105,6 +105,27 @@ func TestSameFilePasses(t *testing.T) {
 	}
 }
 
+func TestNoTrustAnchorExplained(t *testing.T) {
+	// The package fixtures were made offline, without trusted lists: no chain reaches a trust anchor.
+	r := Run(presented(t, "pades-two-qes-sk"), pkgBytes(t, "pades-two-qes-sk.zip"), tool)
+	n := 0
+	for _, x := range r.Steps[4].Details {
+		if !strings.HasPrefix(x, "Signature ") {
+			continue // the closing line about the package's validation data
+		}
+		n++
+		if !strings.Contains(x, noTrustAnchor) || !strings.HasSuffix(x, ". "+notOnTrustedList) {
+			t.Errorf("step 4 detail without the explanation: %s", x)
+		}
+	}
+	if n != 2 {
+		t.Errorf("step 4: %d signature details, want 2: %v", n, r.Steps[4].Details)
+	}
+	if r.Steps[4].Result != Recorded {
+		t.Errorf("step 4: %s", r.Steps[4].Result)
+	}
+}
+
 func TestAnotherFileFails(t *testing.T) {
 	r := Run(presented(t, "pades-one-signature"), pkgBytes(t, "pades-two-qes-sk.zip"), tool)
 	got := results(r)

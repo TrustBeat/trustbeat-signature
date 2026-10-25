@@ -503,6 +503,16 @@ func intact(s peoSignature) string {
 	return "not intact"
 }
 
+// noTrustAnchor is what the server records in the PEO when no certificate of the chain is on an EU trusted
+// list (DssFacts.NoTrustAnchor); notOnTrustedList is the explanation the server's report gives beside it.
+const (
+	noTrustAnchor    = "no certificate chain to a trust anchor in the EU trusted lists"
+	notOnTrustedList = "This does not mean the signature is invalid: its issuer (for example a commercial signing platform or an " +
+		"organisation's own certificate authority) is not on an EU trusted list, the only trust anchors of the " +
+		"signature validation policy, so trust in it is not established here. Step 3 shows whether the signature " +
+		"value verifies."
+)
+
 func chainStep(p *pkg) Step {
 	st := Step{Step: 4, Name: "chain", Title: "The signer's certificate chains to a trust anchor, with revocation data from preservation time",
 		CheckedBy: []string{byDSS}, Result: Recorded}
@@ -510,13 +520,18 @@ func chainStep(p *pkg) Step {
 		msg := "chain to a trust anchor of the EU trusted lists, revocation data for every certificate."
 		if len(s.DSS.Missing) > 0 {
 			var m []string
+			anchor := false
 			for _, x := range s.DSS.Missing {
 				if dn, ok := strings.CutPrefix(x, "no revocation data for "); ok {
 					x = "no revocation data for " + cn(dn)
 				}
+				anchor = anchor || x == noTrustAnchor
 				m = append(m, x)
 			}
 			msg = strings.Join(m, "; ") + "."
+			if anchor {
+				msg += " " + notOnTrustedList
+			}
 		}
 		if s.DSS.SubIndication != nil && strings.HasPrefix(*s.DSS.SubIndication, "REVOKED") {
 			msg = "revoked (" + *s.DSS.SubIndication + ")."
