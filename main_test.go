@@ -193,6 +193,27 @@ func TestPreserveSendsTheSubmissionNeverTheFile(t *testing.T) {
 	}
 }
 
+func TestPreserveWarnsAboutAnInvalidSignatureButKeepsTheRecord(t *testing.T) {
+	record := `{"id":"01REC","status":"pending","signatures":[{"index":0,"indication":"TOTAL_FAILED","sub_indication":"HASH_FAILURE"}]}`
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusAccepted)
+		_, _ = w.Write([]byte(record))
+	}))
+	defer srv.Close()
+	t.Setenv("TRUSTBEAT_API_URL", srv.URL)
+	t.Setenv("TRUSTBEAT_API_KEY", "k")
+	code, out, stderr := cli("preserve", fixtures+"asic-xades/onefile-ok.asics")
+	if code != exitOK {
+		t.Fatalf("exit %d: %s", code, stderr)
+	}
+	if out != record {
+		t.Errorf("stdout is not the record unchanged: %q", out)
+	}
+	if !strings.Contains(stderr, "warning: signature 0: EU DSS found it invalid (TOTAL_FAILED / HASH_FAILURE)") {
+		t.Errorf("no warning: %q", stderr)
+	}
+}
+
 func TestPreserveRejectedByTheAPIExitsFour(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusPaymentRequired)

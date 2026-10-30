@@ -518,6 +518,13 @@ func chainStep(p *pkg) Step {
 		CheckedBy: []string{byDSS}, Result: Recorded}
 	for _, s := range p.peo.Signatures {
 		msg := "chain to a trust anchor of the EU trusted lists, revocation data for every certificate."
+		if s.DSS.VerdictApplicable && !DSSPassed(s.DSS.Indication) {
+			// DSS lists nothing missing but did not pass the signature (an expired certificate, a chain it
+			// could not build): the chain is not confirmed, and its result says why. Without a verdict
+			// (content TrustBeat never receives) the result says nothing about the chain.
+			msg = "EU DSS did not confirm a chain to a trust anchor with revocation data: its result is " +
+				DSSResult(s.DSS.Indication, s.DSS.SubIndication) + "."
+		}
 		if len(s.DSS.Missing) > 0 {
 			var m []string
 			anchor := false

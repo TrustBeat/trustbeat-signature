@@ -14,9 +14,6 @@ checked here against the data in hand — and the file's own digests. **The sign
 your machine**; TrustBeat receives signatures and digests only. The source is open so that you can
 check exactly what is sent.
 
-> **Status:** Signature Preservation is not launched yet. `extract` and `verify` work offline today;
-> `preserve` gets `404` from the API until launch.
-
 ## Install
 
 ```bash
@@ -94,7 +91,15 @@ trustbeat-signature preserve contract.pdf --client-ref contract-17
 
 `preserve` extracts as above and posts the submission — never the file — to
 `POST /v1/signature-preservation`, then prints the record the API returns (status `pending` →
-`anchored` → `preserved`). The endpoint answers `404` until the product is launched.
+`anchored` → `preserved`) to stdout, and what EU DSS found for each signature to stderr. Every
+signature is preserved whatever DSS found — the result is recorded, not judged. A signature DSS could
+not validate (for example one whose issuer is on no EU trusted list) is reported as such; one DSS found
+**invalid** (`TOTAL_FAILED`) gets a `warning:` line with the command to delete the record if you did not
+mean to keep it. The exit code is `0` in every case.
+
+Preserving needs a Signature Preservation subscription on the account (Starter or Business, no free
+trial). Without one the API answers `402 SUBSCRIPTION_REQUIRED`: `preserve` prints its message, which
+gives the billing link, and exits `4` — nothing is stored.
 
 **File names.** The submission carries the signed file's name, which often names a person
 (`Smlouva_Jan_Novak.pdf`). `--hide-names` (on `extract` and `preserve`) sends the first 16 hex digits

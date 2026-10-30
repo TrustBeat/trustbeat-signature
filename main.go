@@ -48,7 +48,8 @@ extract   Reads a signed PDF (PAdES), XML (XAdES), CMS (.p7m/.p7s, CAdES) or ASi
           container, checks that every signature still matches the signed data, and writes
           the submission JSON (to stdout, or to --out). Works offline.
 preserve  Extracts as above and sends the submission to TrustBeat Signature Preservation. Only
-          the submission is sent, never the file. Prints the preservation record.
+          the submission is sent, never the file. Prints the preservation record, and what
+          EU DSS found for each signature to stderr (a warning when DSS found one invalid).
           API key: TRUSTBEAT_API_KEY. API: TRUSTBEAT_API_URL (default ` + defaultAPIURL + `).
 
 verify    Checks the file against its Signature Preservation package (GET
@@ -297,6 +298,11 @@ func doPreserve(o options, sub *extract.Submission, stdout, stderr io.Writer) in
 			return exitRejected
 		}
 		return exitError
+	}
+	// The record goes to stdout (or --out) unchanged; what EU DSS found goes to stderr, so a signature that
+	// does not validate is never kept without the subscriber being told.
+	for _, l := range verify.RecordSummary(out) {
+		fmt.Fprintln(stderr, l)
 	}
 	return write(o.out, out, stdout, stderr)
 }
